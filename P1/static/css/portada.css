@@ -41,12 +41,12 @@ header{
     width: auto;
 }
 
-.navbar{
+.navbar-left, .navbar-right{
     min-width: 335px;
     max-width: 335px;
 }
 
-.navbar a, .navbar-small a{
+.navbar-left a, .navbar-right a, .navbar-small a{
     color: black;
     height: 100%;
     font-size: 17px;
@@ -55,11 +55,11 @@ header{
     white-space: nowrap;
 }
 
-.navbar a:visited, .navbar-small a:visited{
+.navbar-left a:visited, .navbar-right a:visited, .navbar-small a:visited{
     color: black;
 }
 
-.navbar a:hover, .navbar-small a:hover{
+.navbar-left a:hover, .navbar-right a:hover, .navbar-small a:hover{
     color: var(--primary-color);
     transition-duration: 0.5s;
 }
@@ -69,7 +69,7 @@ header{
     visibility: none;
 }
 
-#navbar-left{
+.navbar-left{
     display: flex;
     justify-content: right;
 }
@@ -264,7 +264,7 @@ footer{
         justify-content: center;
     }
 
-    .navbar, #navbar-left{
+    .navbar-left, .navbar-right{
         visibility: none;
         display: none;
     }
