@@ -91,8 +91,7 @@ article{
 }
 
 .buy-button:hover{
-    color: black;
-    background-color: rgb(168, 168, 168);
+    background-color: var(--button-color);
     box-shadow: 10px 10px 5px var(--primary-color);
     -moz-box-shadow: 0 0 10px var(--primary-color);
     -webkit-box-shadow: 0 0 10px var(--primary-color);
