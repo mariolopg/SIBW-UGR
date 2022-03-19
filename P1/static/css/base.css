@@ -39,8 +39,8 @@ header{
 }
 
 .navbar-left, .navbar-right{
-    min-width: 335px;
-    max-width: 335px;
+    min-width: 354px;
+    max-width: 354px;
 }
 
 .navbar-left a, .navbar-right a, .navbar-small a{
@@ -85,8 +85,10 @@ body{
 }
 
 aside{
+    /* calculo la anchura para que tenga el 25% de la pantalla menos unos píxeles de margen */
     min-width: calc(100vw * 0.25 - 23px);
     max-width: calc(100vw * 0.25 - 23px);
+    /* calculo la altura para que salve la navbar y el footer */
     min-height: calc(100vh - 175px);
     max-height: calc(100vh - 175px);
     position: fixed;
@@ -176,7 +178,7 @@ footer{
         display: block;
     }
 
-    .logo{
+    .logo, .logo a{
         display: flex;
         justify-content: center;
     }
