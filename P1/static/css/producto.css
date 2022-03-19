@@ -105,3 +105,7 @@ article{
     box-shadow: 0 0 10px var(--primary-color);
     transition-duration: 0.5s;
 }
+
+article p{
+    text-align: justify;
+}
