@@ -44,6 +44,7 @@ header{
 }
 
 .navbar-left a, .navbar-right a, .navbar-small a{
+    color: var(--text-color);
     font-size: 17px;
     text-decoration: none;
     height: 100%;
@@ -99,6 +100,10 @@ aside{
     z-index: 0;
     overflow-x: hidden;
     overflow-y: scroll;
+}
+
+aside::-webkit-scrollbar{
+    overflow-x: hidden;
 }
 
 .aside-navbar{
