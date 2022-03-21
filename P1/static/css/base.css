@@ -13,13 +13,12 @@
 
 header{
     background-color: var(--navbar-color);
-    width: 100%;
-    height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    height: fit-content;
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     opacity: 95%;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
@@ -28,13 +27,22 @@ header{
     z-index: 1;
 }
 
+.navbar-logo{
+    min-width: 100%;
+    max-width: 100%;
+    max-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo{
-    height: 100%;
+    max-height: fit-content;
     margin: 0px 20px;
 }
 
 .logo img{
-    height: 100%;
+    height: 100px;
     width: auto;
 }
 
@@ -68,6 +76,18 @@ header{
 .navbar-left{
     display: flex;
     justify-content: right;
+}
+
+.header-title{
+    color: var(--primary-color);
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.msg{
+    margin: 0px;
+    padding: 0px;
 }
 
 body{
@@ -179,7 +199,7 @@ footer{
 
 @media only screen and (max-width: 900px) {
 
-    header{
+    .navbar-logo{
         display: block;
     }
 
@@ -195,6 +215,10 @@ footer{
     .navbar-small{
         display: flex;
         justify-content: center;
+    }
+
+    .msg{
+        margin-top: 20px;
     }
 
     .aside-navbar{

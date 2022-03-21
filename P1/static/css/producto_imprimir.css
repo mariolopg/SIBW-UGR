@@ -2,13 +2,17 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 
-header{
+.navbar-logo{
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
 .navbar-right, .navbar-left, .navbar-small{
+    display: none;
+}
+
+.header-title{
     display: none;
 }
 
