@@ -1,0 +1,85 @@
+.product-grid-asidebar{
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 23px;
+    display: flex;
+}
+
+.product-grid{
+    min-width: 75%;
+    max-width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product{
+    width: 33%;
+    float: left;
+}
+
+.product-img{
+    padding: 10px;
+    position: relative;
+}
+
+.product-img img{
+    width: 100%;
+    height: auto;
+}
+
+.product-img a{
+    display: block;
+    position: relative;
+}
+
+.product-img-overlay{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px var(--hover-color);
+    -moz-box-shadow: 0 0 10px var(--hover-color);
+    -webkit-box-shadow: 0 0 10px var(--hover-color);
+    box-shadow: 0 0 10px var(--hover-color);
+    background-color: var(--overlay-color);
+    transition-duration: 1s;
+}
+
+.product-img:hover .product-img-overlay{
+    opacity: 1;
+}
+
+.sneaker-name{
+    color: var(--text-color);
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    align-content: center;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 900px) {
+
+    .product{
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+}
+  
+@media only screen and (max-width: 500px) {
+
+    .product{
+        width: 100%;
+    }
+}
