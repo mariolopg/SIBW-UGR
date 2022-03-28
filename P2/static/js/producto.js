@@ -168,13 +168,15 @@ function checkRudeWord() {
         wordArray[wordArray.length - 1] = bannedWord;
         comment.value = "";
 
-        for(var i = 0; i < wordArray.length; i++)
+        for(var i = 0; i < wordArray.length - 1; i++)
             comment.value += wordArray[i] + " ";
+
+        comment.value += wordArray[wordArray.length - 1];
     }
 
 }
 
 function checkWord(key) {
-    if(key.key == " ")
+    if(key.key == " " || key.key == "," || key.key == ".")
         checkRudeWord();
 }
