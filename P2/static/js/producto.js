@@ -115,9 +115,23 @@ function getDivComentario() {
     return divComentario;
 }
 
+function checkEmail() {
+    var email = document.getElementById("input-mail");
+    var result = /^\w+([\.-]?\w+)*@(gmail|hotmail|correo\.ugr)\.(com|es|org)/.test(email.value);
+
+    if(!result){
+        alert("Introduzca un correo valido");
+        setOutline(email, "red");
+    }
+    else
+        setOutline(email, "var(--primary-color)");
+
+    return result;
+}
+
 function canAddComment() {
     // · Autor, correo o comentario incorrecto return false
-    if(isInputEmpty("input-name") || isInputEmpty("input-mail") || isInputEmpty("input-comment")){
+    if(!checkEmail() || isInputEmpty("input-name") || isInputEmpty("input-mail") || isInputEmpty("input-comment")){
         return false;
     }
 
@@ -141,7 +155,7 @@ function addComment() {
 
 function checkRudeWord() {
     var comment = document.getElementById("input-comment");
-    var rudeWords = ["tonto", "gilipollas", "capullo", "mierda"];
+    var rudeWords = ["tonto", "gilipollas", "capullo", "mierda", "cipote", "puta"];
 
     var wordArray = comment.value.split(" ");
     var lastWord = wordArray[wordArray.length - 1];
