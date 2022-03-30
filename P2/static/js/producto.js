@@ -2,7 +2,51 @@ window.onload = function (){
     document.getElementById("id-comment-link").addEventListener("click", displayCommentsForm);
     document.getElementById("input-submit").addEventListener("click", addComment);
     document.getElementById("input-comment").addEventListener("keypress", checkWord);
+
+    // Generate comments
+    generateComment("Juan", "Estas zapatillas son muy cómodas.", "1px");
+    generateComment("Pablo", "Me llegaron a tiempo. Un poco caras.", "0px");
 };
+
+function generateComment(autor, comment, bottomBorder) {
+    // Crear autor
+    var spanAutor = createComponent("span", "autor");
+    spanAutor.innerText = autor;
+
+    // Crear fecha
+    var spanFecha = getSpanFecha();
+    var divAutorFecha = createComponent("div", "autor-fecha");
+
+    // Añadir autor y fecha
+    divAutorFecha.append(spanAutor);
+    divAutorFecha.append(spanFecha);
+
+    // Crear resena
+    var resena = createComponent("span", "resena");
+    var divResena = createComponent("div", "div-resena");
+    resena.innerText = comment;
+    divResena.append(resena);
+
+    // Crear comentario
+    var comentario = createComponent("div", "comentario");
+    comentario.append(divAutorFecha);
+    comentario.append(divResena);
+
+    // Crear li
+    var commentLi = createComponent("li", "li-list-comment");
+    commentLi.append(comentario);
+    commentLi.style.borderBottomWidth = bottomBorder;
+
+    // Add comment
+    var commentUl = document.getElementById("id-ul-list-comment");
+    commentUl.prepend(commentLi);
+}
+
+function createComponent(component, classname) {
+    var element = document.createElement(component);
+    element.classList.add(classname);
+    return element;
+}
 
 function clearInput(id) {
     document.getElementById(id).value = "";
@@ -21,6 +65,22 @@ function isInputEmpty(id) {
     }
 
     return bool;
+}
+
+function getSpan(id, classname, alerta) {
+    var input = document.getElementById(id);
+
+    if(isInputEmpty(id)){
+        alert(alerta);
+        setOutline(input, "red");
+    }
+    else{
+        setOutline(input, "var(--primary-color)");
+        var span = createComponent("span", classname);
+        span.innerText = input.value;
+
+        return span
+    }
 }
 
 function getFecha() {
@@ -45,70 +105,30 @@ function displayCommentsForm() {
     }
 }
 
-function getSpanAutor() {
-
-    var autor = document.getElementById("input-name");
-
-    if(isInputEmpty("input-name")){
-        alert("Introduzca su nombre");
-        setOutline(autor, "red");
-    }
-    else{
-        setOutline(autor, "var(--primary-color)");
-        var spanAutor = document.createElement("span");
-        spanAutor.innerText = autor.value;
-        spanAutor.classList.add("autor");
-
-        return spanAutor;
-    }
-}
-
 function getSpanFecha() {
-    var spanFecha = document.createElement("span");
+    var spanFecha = createComponent("span", "fecha");
     spanFecha.innerText = getFecha();
-    spanFecha.classList.add("fecha");
 
     return spanFecha;
 }
 
 function getDivAutorFecha() {
-    var divAutorFecha = document.createElement("div");
-    divAutorFecha.classList.add("autor-fecha");
-    divAutorFecha.append(getSpanAutor());
+    var divAutorFecha = createComponent("div", "autor-fecha");
+    divAutorFecha.append(getSpan("input-name", "autor", "Introduzca su nombre"));
     divAutorFecha.append(getSpanFecha());
 
     return divAutorFecha;
 }
 
-function getSpanResena() {
-    
-    var comentario = document.getElementById("input-comment");
-
-    if(isInputEmpty("input-comment")){
-        alert("Introduzca su comentario");
-        setOutline(comentario, "red");
-    }
-    else{
-        setOutline(comentario, "var(--primary-color)");
-        var spanResena = document.createElement("span");
-        spanResena.innerText = comentario.value;
-        spanResena.classList.add("resena");
-
-        return spanResena;
-    }
-}
-
 function getDivResena() {
-    var divResena = document.createElement("div");
-    divResena.classList.add("div-resena");
-    divResena.append(getSpanResena());
+    var divResena = createComponent("div", "div-resena");
+    divResena.append(getSpan("input-comment", "resena", "Introduzca su comentario"));
 
     return divResena;
 }
 
 function getDivComentario() {
-    var divComentario = document.createElement("div");
-    divComentario.classList.add("comentario");
+    var divComentario = createComponent("div", "comentario");
     divComentario.append(getDivAutorFecha());
     divComentario.append(getDivResena());
 
@@ -120,7 +140,12 @@ function checkEmail() {
     var result = /^\w+([\.-]?\w+)*@(gmail|hotmail|correo\.ugr)\.(com|es|org)/.test(email.value);
 
     if(!result){
-        alert("Introduzca un correo valido");
+        if(isInputEmpty("input-mail")){
+            alert("Introduzca su correo");
+        }
+        else{
+            alert("Introduzca un correo valido");
+        }
         setOutline(email, "red");
     }
     else
@@ -131,7 +156,7 @@ function checkEmail() {
 
 function canAddComment() {
     // · Autor, correo o comentario incorrecto return false
-    if(!checkEmail() || isInputEmpty("input-name") || isInputEmpty("input-mail") || isInputEmpty("input-comment")){
+    if(!checkEmail() || isInputEmpty("input-name") || isInputEmpty("input-comment")){
         return false;
     }
 
@@ -141,7 +166,8 @@ function canAddComment() {
 function addComment() {
     var list = document.getElementById("id-ul-list-comment");
     var li = document.createElement("li");
-    li.classList.add("li-list-comment")
+    li.classList.add("li-list-comment");
+    li.style.borderBottomWidth = "0px";
     
     li.append(getDivComentario());
 
