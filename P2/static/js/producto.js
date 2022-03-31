@@ -4,11 +4,11 @@ window.onload = function (){
     document.getElementById("input-comment").addEventListener("keypress", checkWord);
 
     // Generate comments
-    generateComment("Juan", "Estas zapatillas son muy cómodas.", "1px");
-    generateComment("Pablo", "Me llegaron a tiempo. Un poco caras.", "0px");
+    generateComment("Juan", "Estas zapatillas son muy cómodas.");
+    generateComment("Pablo", "Me llegaron a tiempo. Un poco caras.");
 };
 
-function generateComment(autor, comment, bottomBorder) {
+function generateComment(autor, comment) {
     // Crear autor
     var spanAutor = createComponent("span", "autor");
     spanAutor.innerText = autor;
@@ -35,7 +35,6 @@ function generateComment(autor, comment, bottomBorder) {
     // Crear li
     var commentLi = createComponent("li", "li-list-comment");
     commentLi.append(comentario);
-    commentLi.style.borderBottomWidth = bottomBorder;
 
     // Add comment
     var commentUl = document.getElementById("id-ul-list-comment");
@@ -52,8 +51,10 @@ function clearInput(id) {
     document.getElementById(id).value = "";
 }
 
-function setOutline(component, color) {
+function setOutlineBorderText(component, color) {
     component.style.outlineColor = color;
+    component.style.borderColor = color;
+    component.style.color = color;
 }
 
 function isInputEmpty(id) {
@@ -72,10 +73,10 @@ function getSpan(id, classname, alerta) {
 
     if(isInputEmpty(id)){
         alert(alerta);
-        setOutline(input, "red");
+        setOutlineBorderText(input, "red");
     }
     else{
-        setOutline(input, "var(--primary-color)");
+        setOutlineBorderText(input, "var(--primary-color)");
         var span = createComponent("span", classname);
         span.innerText = input.value;
 
@@ -146,10 +147,10 @@ function checkEmail() {
         else{
             alert("Introduzca un correo valido");
         }
-        setOutline(email, "red");
+        setOutlineBorderText(email, "red");
     }
     else
-        setOutline(email, "var(--primary-color)");
+        setOutlineBorderText(email, "var(--primary-color)");
 
     return result;
 }
@@ -167,7 +168,6 @@ function addComment() {
     var list = document.getElementById("id-ul-list-comment");
     var li = document.createElement("li");
     li.classList.add("li-list-comment");
-    li.style.borderBottomWidth = "0px";
     
     li.append(getDivComentario());
 

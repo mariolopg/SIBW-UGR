@@ -135,7 +135,6 @@ article p{
 .comment-form-container{
     width: 100%;
     margin-top: 10px;
-    border: 1px solid black;
     display: none;
 }
 
@@ -153,9 +152,16 @@ article p{
 }
 
 .li-list-comment{
-    padding: 10px;
-    border: 1px solid rgb(158, 158, 158);
+    margin: 10px 0px;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
     max-width: 100%;
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 10px 10px 5px var(--primary-color);
+    -moz-box-shadow: 0 0 10px var(--primary-color);
+    -webkit-box-shadow: 0 0 10px var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
 .comentario{
@@ -206,10 +212,12 @@ article p{
     padding: 7.5px;
     font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
     font-size: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
 }
 
 .form-input input:focus, .form-input textarea:focus{
-    outline-color: var(--primary-color);
+    outline-color: var(--button-color);
     color: var(--primary-color);
 }
 
