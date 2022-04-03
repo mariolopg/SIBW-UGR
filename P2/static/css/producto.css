@@ -143,6 +143,8 @@ article p{
     display: flex;
     justify-content: center;
     align-content: center;
+    max-height: 326px;
+    overflow-y: auto;
 }
 
 .ul-list-comment{
@@ -188,6 +190,7 @@ article p{
 }
 
 .formulario{
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-content: center;
