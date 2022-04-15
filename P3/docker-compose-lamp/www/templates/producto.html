@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+    {% block main_article %}
+        <!-- nombre del producto, valoracion, imágen, botón de compra y precio -->
+        <div class="product-description">
+            <!-- nombre del producto y valoracion -->
+            <div class="product-review-buy">
+                <h1>{{ info.nombre }}</h1>
+                <div class="product-review">
+                    <img src="static/image/starts_review.png"> <span>{{ info.valoraciones }} valoraciones</span>
+                </div>
+            </div>
+            <!-- imágen y pie de foto -->
+            <div class="product-description-img">
+                {% for image in images %}
+                    <img src="data:image/png;base64,{{ image['image'] }}" alt="Embedded Image" />
+                {% endfor %}
+            </div>
+            <!-- botón de compra -->
+            <div class="product-buy">
+                <a href="#" class="buy-button">Comprar</a> <h2>{{ info.precio }} €</h2>
+            </div>
+        </div>
+        <!-- descripción del producto -->
+        <p>
+            {{ info.descripcion }}
+        </p>
+
+        <div class="comment-link" id="id-comment-link">
+            <span>Comentarios </span>
+            <i class="fa-solid fa-caret-right" id="comment-arrow"></i>
+        </div>
+
+        <div class="comment-form-container" id="id-comment-form-container">
+            <div class="comments">
+                <ul class="ul-list-comment" id="id-ul-list-comment">
+                    <!-- <li class="li-list-comment"> 
+                        <div class="comentario">
+                            <div class="autor-fecha">
+                                <span class="autor"></span>
+                                <span class="fecha"></span>
+                            </div>
+                            <div class="div-resena">
+                                <span class="resena"></span>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="formulario">
+                <form>
+                    <div class="form-input">
+                        <input id="input-name" type="text" placeholder="Introduzca su nombre">
+                    </div>
+                    <div class="form-input">
+                        <input id="input-mail" type="text" placeholder="Introduzca su correo electrónico">
+                    </div>
+                    <div class="form-input">
+                        <textarea id="input-comment" placeholder="Introduzca su comentario..."></textarea>
+                    </div>
+                    <div class="form-input-button">
+                        <input class="form-button" id="input-submit" type="button" value="Enviar">
+                        <input class="form-button" id="input-reset" type="reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% endblock %}

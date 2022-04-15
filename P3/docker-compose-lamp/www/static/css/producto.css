@@ -1,0 +1,227 @@
+article{
+    min-width: 70%;
+    max-width: 70%;
+    margin: 30px;
+    margin-top: 0px;
+}
+
+.product-description{
+    width: 100%;
+    height: max-content;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-description-img{
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-description-img img{
+    max-width: 400px;
+}
+
+.product-review-buy{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+.product-review-buy h1 {
+    font-size: x-large;
+    text-align: center;
+    height: fit-content;
+    min-width: 100%;
+    max-width: 100%;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.product-review, .product-buy {
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: 0px auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.caption{
+    text-align: center;
+    min-width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.product-buy {
+    min-width: 100%;
+    margin-top: 20px;
+}
+
+.product-review img{
+    height: 30px;
+}
+
+.product-review span, .product-review a, .product-review h2, .product-buy span, .product-buy a, .product-buy h2{
+    margin: auto 0px auto 20px;
+}
+
+.buy-button, .form-button{
+    color: white;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.buy-button:hover, .form-button:hover{
+    background-color: var(--button-color);
+    box-shadow: 10px 10px 5px var(--primary-color);
+    -moz-box-shadow: 0 0 10px var(--primary-color);
+    -webkit-box-shadow: 0 0 10px var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+article p{
+    text-align: justify;
+}
+
+.comment-link{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.comment-link:hover{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.comment-link span{
+    margin-right: 10px;
+}
+
+.comment-link i{
+    display: flex;
+    align-self: center;
+    transition-duration: 0.5s;
+}
+
+.comment-form-container{
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+}
+
+.comments{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-height: 326px;
+    overflow-y: auto;
+}
+
+.ul-list-comment{
+    width: 80%;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.li-list-comment{
+    margin: 10px 0px;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    max-width: 100%;
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 10px 10px 5px var(--primary-color);
+    -moz-box-shadow: 0 0 10px var(--primary-color);
+    -webkit-box-shadow: 0 0 10px var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.comentario{
+    display: block;
+}
+
+.autor-fecha{
+    display: flex;
+}
+
+.autor{
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.fecha{
+    text-align: right;
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.div-resena{
+    margin-top: 10px
+}
+
+.formulario{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.formulario form {
+    display: block;
+    min-width: 80%;
+    max-width: 80%;
+}
+
+.form-input, .form-input-button{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.form-input input, .form-input textarea{
+    width: 50%;
+    padding: 7.5px;
+    font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.form-input input:focus, .form-input textarea:focus{
+    outline-color: var(--button-color);
+    color: var(--primary-color);
+}
+
+.form-input-button input{
+    margin: 0px 10px;
+}
+
+.form-input textarea{
+    resize: none;
+}
+
