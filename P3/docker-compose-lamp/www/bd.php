@@ -39,24 +39,37 @@
         return $info;
     }
 
-    function getRudeWords($mysqli){
-        $res = $mysqli->query("SELECT * FROM badWords");
+    // function getRudeWords($mysqli){
+    //     $res = $mysqli->query("SELECT * FROM badWords");
 
-        $badWords = array();
+    //     $badWords = array();
+    //     $info = array();
+
+    //     if($res->num_rows > 0){
+    //         while($row = $res->fetch_assoc()){
+    //             $rows[] = $row;
+    //         }
+            
+    //         foreach ($rows as $key => $row) {
+    //             $info[$key] = ['word' => base64_encode($row['word'])];
+    //         }
+    //     }
+        
+    //     return $info;
+    // }
+
+    function getGallery($mysqli){
+        $numFilas = $mysqli->query("SELECT name FROM sneakersInfo")->num_rows;
         $info = array();
 
-        if($res->num_rows > 0){
-            while($row = $res->fetch_assoc()){
-                $rows[] = $row;
-            }
-            
-            foreach ($rows as $key => $row) {
-                $info[$key] = ['word' => base64_encode($row['word'])];
-            }
-        }
-        
-        return $info;
 
+        for($i = 1; $i <= $numFilas; $i++){
+            $name = getInfo($i, $mysqli);
+            $images = getImages($i, $mysqli);
+            $info[$i] = ['nombre' => $name['nombre'], 'images' => $images[0]];
+        }
+
+        return $info;
     }
 
 ?>

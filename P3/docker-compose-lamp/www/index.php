@@ -14,9 +14,13 @@
         $id = $_GET['id'];
     };
 
-    $info = getInfo($id, $mysqli);
-    $images = getImages($id, $mysqli);
-    $rudeWords = getRudeWords($mysqli);
+    // $info = getInfo($id, $mysqli);
+    // $images = getImages($id, $mysqli);
+    // $rudeWords = getRudeWords($mysqli);
 
-    echo $twig->render('producto.html', ['info' => $info, 'images' => $images, 'rudeWords' => $rudeWords]);
+    // echo $twig->render('producto.html', ['info' => $info, 'images' => $images, 'rudeWords' => $rudeWords]);
+    
+    $gallery = getGallery($mysqli);
+    
+    echo $twig->render('portada.html', ['gallery' => $gallery]);
 ?>
