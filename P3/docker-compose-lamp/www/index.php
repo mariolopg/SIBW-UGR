@@ -7,18 +7,6 @@
     $twig = new \Twig\Environment($loader);
 
     $mysqli = conectar();
-
-    $id = -1;
-
-    if(isset($_GET['id'])){
-        $id = $_GET['id'];
-    };
-
-    // $info = getInfo($id, $mysqli);
-    // $images = getImages($id, $mysqli);
-    // $rudeWords = getRudeWords($mysqli);
-
-    // echo $twig->render('producto.html', ['info' => $info, 'images' => $images, 'rudeWords' => $rudeWords]);
     
     $gallery = getGallery($mysqli);
     

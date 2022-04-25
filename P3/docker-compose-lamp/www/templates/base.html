@@ -9,7 +9,9 @@
         <div class="body-container">
             <!-- header contiene las barras de navegacion y el logo -->
             <header>
-                {% include "common/header.html" %}
+                {% block navbar %}
+                    {% include "common/header.html" %}
+                {% endblock %}
             </header>
             <section class="article-asidebar">
                 <article>

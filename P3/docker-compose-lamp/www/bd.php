@@ -1,6 +1,7 @@
 <?php
 
     function getInfo($id, $mysqli){
+        $id = $mysqli->real_escape_string($id);
         $res = $mysqli->query("SELECT * FROM sneakersInfo WHERE id=" . $id);
 
         $nombre = 'no_name';
@@ -16,7 +17,7 @@
             $valoraciones = $row['valoraciones'];
         }
 
-        return ['nombre' => $nombre, 'descripcion' => $descripcion, 'precio' => $precio, 'valoraciones' => $valoraciones];
+        return ['id' => $id, 'nombre' => $nombre, 'descripcion' => $descripcion, 'precio' => $precio, 'valoraciones' => $valoraciones];
     }
 
     function getImages($id, $mysqli){
@@ -66,7 +67,7 @@
         for($i = 1; $i <= $numFilas; $i++){
             $name = getInfo($i, $mysqli);
             $images = getImages($i, $mysqli);
-            $info[$i] = ['nombre' => $name['nombre'], 'images' => $images[0]];
+            $info[$i] = ['id' => $name['id'], 'nombre' => $name['nombre'], 'images' => $images[0]];
         }
 
         return $info;

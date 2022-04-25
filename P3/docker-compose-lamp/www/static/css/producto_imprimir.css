@@ -35,7 +35,7 @@ aside{
     display: none;
 }
 
-.product-review, .product-buy{
+.product-review, .product-buy, .print-product, .comment-link, .comment-form-container{
     display: none;
 }
 
