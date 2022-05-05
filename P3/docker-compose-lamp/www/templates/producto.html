@@ -36,17 +36,19 @@
         <div class="comment-form-container" id="id-comment-form-container">
             <div class="comments">
                 <ul class="ul-list-comment" id="id-ul-list-comment">
-                    <!-- <li class="li-list-comment"> 
+                    {% for comment in comments %}
+                    <li class="li-list-comment"> 
                         <div class="comentario">
                             <div class="autor-fecha">
-                                <span class="autor"></span>
-                                <span class="fecha"></span>
+                                <span class="autor">{{ comment['user'] }}</span>
+                                <span class="fecha">{{ comment['date'] }}</span>
                             </div>
                             <div class="div-resena">
-                                <span class="resena"></span>
+                                <span class="resena">{{ comment['comment'] }}</span>
                             </div>
                         </div>
-                    </li> -->
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="formulario">

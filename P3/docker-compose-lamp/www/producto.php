@@ -21,8 +21,7 @@
 
     $info = getInfo($id, $mysqli);
     $images = getImages($id, $mysqli);
-    // $rudeWords = getRudeWords($mysqli);
+    $comments = getComments($id, $mysqli);
 
-    echo $twig->render($link, ['info' => $info, 'images' => $images]);
-    // echo $twig->render('producto.html', ['info' => $info, 'images' => $images, 'rudeWords' => $rudeWords]);
+    echo $twig->render($link, ['info' => $info, 'images' => $images, 'comments' => $comments]);
 ?>

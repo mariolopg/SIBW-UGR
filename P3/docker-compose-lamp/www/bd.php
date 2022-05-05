@@ -24,7 +24,6 @@
         $res = $mysqli->query("SELECT image FROM sneakersImages WHERE id_sneaker=" . $id);
 
         $rows = array();
-        $images = array();
         $info = array();
 
         if($res->num_rows > 0){
@@ -40,24 +39,35 @@
         return $info;
     }
 
-    // function getRudeWords($mysqli){
-    //     $res = $mysqli->query("SELECT * FROM badWords");
+    function getComments($id, $mysqli){
+        $id = $mysqli->real_escape_string($id);
+        $res = $mysqli->query("SELECT * FROM sneakersComments WHERE id_sneaker=" . $id);
 
-    //     $badWords = array();
-    //     $info = array();
+        $rows = array();
+        $info = array();
 
-    //     if($res->num_rows > 0){
-    //         while($row = $res->fetch_assoc()){
-    //             $rows[] = $row;
-    //         }
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()){
+                $rows[] = $row;
+            }
             
-    //         foreach ($rows as $key => $row) {
-    //             $info[$key] = ['word' => base64_encode($row['word'])];
-    //         }
-    //     }
+            foreach ($rows as $key => $row) {
+                $info[$key] = ['user' => $row['user'], 'comment' => $row['comment'], 'date' => date('d/m/Y', strtotime($row['date']))];
+            }
+        }
         
-    //     return $info;
-    // }
+        return $info;
+    }
+
+    function getBadWords($mysqli){
+        $res = $mysqli->query("SELECT * FROM badWords");
+        $info = array();
+
+        while($row = $res->fetch_assoc())
+            $info[] = $row['word'];
+        
+        return json_encode($info);
+    }
 
     function getGallery($mysqli){
         $numFilas = $mysqli->query("SELECT name FROM sneakersInfo")->num_rows;

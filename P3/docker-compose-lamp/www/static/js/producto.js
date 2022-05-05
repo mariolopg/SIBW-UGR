@@ -4,8 +4,8 @@ window.onload = function (){
     document.getElementById("input-comment").addEventListener("keypress", checkWord);
 
     // Generate comments
-    generateComment("Juan", "Estas zapatillas son muy cómodas.");
-    generateComment("Pablo", "Me llegaron a tiempo. Un poco caras.");
+    // generateComment("Juan", "Estas zapatillas son muy cómodas.");
+    // generateComment("Pablo", "Me llegaron a tiempo. Un poco caras.");
 };
 
 function generateComment(autor, comment) {
@@ -181,25 +181,35 @@ function addComment() {
 
 function checkRudeWord() {
     var comment = document.getElementById("input-comment");
-    var rudeWords = ["tonto", "gilipollas", "capullo", "mierda", "cipote", "puta"];
 
-    var wordArray = comment.value.split(" ");
-    var lastWord = wordArray[wordArray.length - 1];
-    var bannedWord = "";
+    var ajax = new XMLHttpRequest();
+    var asynchronous = true;
+    
+    ajax.open("GET", "badwords.php", asynchronous);
+    ajax.send();
 
-    if(rudeWords.includes(lastWord)){
-        for(var i = 0; i < lastWord.length; i++)
-            bannedWord += "*";
+    ajax.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200){
+            var rudeWords = JSON.parse(this.responseText);
 
-        wordArray[wordArray.length - 1] = bannedWord;
-        comment.value = "";
+            var wordArray = comment.value.split(" ");
+            var lastWord = wordArray[wordArray.length - 2];
+            var bannedWord = "";
 
-        for(var i = 0; i < wordArray.length - 1; i++)
-            comment.value += wordArray[i] + " ";
+            if(rudeWords.includes(lastWord.toLowerCase())){
+                for(var i = 0; i < lastWord.length; i++)
+                    bannedWord += "*";
 
-        comment.value += wordArray[wordArray.length - 1];
+                wordArray[wordArray.length - 2] = bannedWord;
+                comment.value = "";
+
+                for(var i = 0; i < wordArray.length - 1; i++)
+                    comment.value += wordArray[i] + " ";
+
+                comment.value += wordArray[wordArray.length - 1];
+            }
+        }
     }
-
 }
 
 function checkWord(key) {
