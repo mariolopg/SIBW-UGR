@@ -196,18 +196,20 @@ function checkRudeWord() {
             var lastWord = wordArray[wordArray.length - 2];
             var bannedWord = "";
 
-            if(rudeWords.includes(lastWord.toLowerCase())){
-                for(var i = 0; i < lastWord.length; i++)
-                    bannedWord += "*";
 
-                wordArray[wordArray.length - 2] = bannedWord;
-                comment.value = "";
+            for(var i = 0; i < rudeWords.length; i++)
+                if(rudeWords[i].toLowerCase() == lastWord.toLowerCase()){
+                    for(var i = 0; i < lastWord.length; i++)
+                        bannedWord += "*";
 
-                for(var i = 0; i < wordArray.length - 1; i++)
-                    comment.value += wordArray[i] + " ";
+                    wordArray[wordArray.length - 2] = bannedWord;
+                    comment.value = "";
 
-                comment.value += wordArray[wordArray.length - 1];
-            }
+                    for(var i = 0; i < wordArray.length - 1; i++)
+                        comment.value += wordArray[i] + " ";
+
+                    comment.value += wordArray[wordArray.length - 1];
+                }
         }
     }
 }
