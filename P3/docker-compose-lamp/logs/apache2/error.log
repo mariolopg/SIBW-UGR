@@ -132,3 +132,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Sat May 07 14:49:56.794631 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
 [Sat May 07 14:49:56.796121 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Sat May 07 15:15:39.389105 2022] [php7:error] [pid 23] [client 172.19.0.1:62768] script '/var/www/html/producto_imprimir.php' not found or unable to stat
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Mon May 09 14:11:05.767420 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Mon May 09 14:11:05.768414 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon May 09 14:11:16.780170 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully

@@ -1,0 +1,203 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 04 18:11:04.984463 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Mon Apr 04 18:11:04.985510 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 04 18:15:07.701200 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 04 18:17:19.131112 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Mon Apr 04 18:17:19.131658 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 04 18:21:51.042262 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 04 18:22:07.374718 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Mon Apr 04 18:22:07.375444 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 04 18:22:21.806622 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sat Apr 09 10:35:25.568440 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sat Apr 09 10:35:25.569376 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 10 15:01:03.979316 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sun Apr 10 15:01:03.980065 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Apr 10 15:08:18.040847 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 10 15:08:44.879037 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sun Apr 10 15:08:44.879554 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Apr 10 16:16:55.900021 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 10 16:17:15.605431 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sun Apr 10 16:17:15.608000 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Apr 10 16:17:35.985766 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.4. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 10 16:18:20.851005 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sun Apr 10 16:18:20.851907 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Apr 10 16:23:23.060945 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 10 16:23:57.921908 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sun Apr 10 16:23:57.923213 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Apr 10 16:24:04.201526 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 10 16:24:18.428093 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sun Apr 10 16:24:18.429310 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Apr 10 16:24:23.948562 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 10 16:24:31.394835 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sun Apr 10 16:24:31.395686 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Apr 10 16:27:28.734805 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 17:10:55.206225 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Mon Apr 11 17:10:55.207112 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 12 15:06:51.190640 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Tue Apr 12 15:06:51.191760 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Apr 12 16:12:15.502648 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 12 16:15:29.406041 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Tue Apr 12 16:15:29.407364 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Apr 12 16:16:49.774060 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 12 16:49:04.051063 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Tue Apr 12 16:49:04.051773 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 13 08:37:34.997505 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Apr 13 08:37:34.998303 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Apr 13 08:42:38.977106 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 13 09:43:27.277533 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Apr 13 09:43:27.278637 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Apr 13 09:44:14.974180 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 13 09:44:51.261990 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Apr 13 09:44:51.262823 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Apr 13 10:06:18.593075 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 13 10:06:28.452353 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Apr 13 10:06:28.453173 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Apr 13 12:13:48.783865 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 13 17:49:43.068804 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Apr 13 17:49:43.069544 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Apr 13 17:51:35.651159 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 13 17:51:49.435205 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Apr 13 17:51:49.435900 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Apr 13 17:54:25.831963 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 13 17:55:25.739400 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Apr 13 17:55:25.740585 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Apr 13 17:55:30.700415 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 13 17:55:35.191309 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Apr 13 17:55:35.191860 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Apr 13 19:09:52.489298 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 14 09:26:59.417920 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Thu Apr 14 09:26:59.418754 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Apr 14 11:36:09.633393 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Apr 15 10:24:10.437156 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Fri Apr 15 10:24:10.438168 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Apr 15 13:09:19.093820 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Apr 15 18:06:36.601523 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Fri Apr 15 18:06:36.609148 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 24 17:35:02.623130 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sun Apr 24 17:35:02.623914 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.5. Set the 'ServerName' directive globally to suppress this message
+[Sun Apr 24 17:36:48.954944 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sun Apr 24 17:36:48.956340 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Apr 24 17:59:22.866991 2022] [php7:error] [pid 31] [client 172.19.0.1:64398] script '/var/www/html/producto_imprimir.php' not found or unable to stat, referer: http://localhost/producto.php?id=3
+[Sun Apr 24 18:04:04.758363 2022] [php7:error] [pid 28] [client 172.19.0.1:64414] script '/var/www/html/producto_imprimir.php' not found or unable to stat, referer: http://localhost/producto.php?id=3
+[Sun Apr 24 18:04:51.942343 2022] [php7:error] [pid 29] [client 172.19.0.1:64424] script '/var/www/html/producto_imprimir.php' not found or unable to stat, referer: http://localhost/producto.php?id=3
+[Sun Apr 24 18:04:55.452194 2022] [php7:error] [pid 29] [client 172.19.0.1:64424] script '/var/www/html/producto_imprimir.php' not found or unable to stat, referer: http://localhost/index.php
+[Sun Apr 24 18:06:14.697724 2022] [php7:error] [pid 27] [client 172.19.0.1:64430] script '/var/www/html/producto_imprimir.php' not found or unable to stat, referer: http://localhost/producto.php?id=1
+[Sun Apr 24 18:06:31.475303 2022] [php7:error] [pid 21] [client 172.19.0.1:64434] script '/var/www/html/producto_imprimir.php' not found or unable to stat, referer: http://localhost/producto.php?id=1
+[Sun Apr 24 18:06:34.528496 2022] [php7:error] [pid 21] [client 172.19.0.1:64434] script '/var/www/html/producto_imprimir.php' not found or unable to stat, referer: http://localhost/producto.php?id=1
+[Sun Apr 24 18:06:35.322982 2022] [php7:error] [pid 21] [client 172.19.0.1:64434] script '/var/www/html/producto_imprimir.php' not found or unable to stat, referer: http://localhost/producto.php?id=1
+[Sun Apr 24 18:06:38.940879 2022] [php7:error] [pid 21] [client 172.19.0.1:64434] script '/var/www/html/producto_imprimir.php' not found or unable to stat
+[Sun Apr 24 18:47:06.433477 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 25 13:35:19.150284 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Mon Apr 25 13:35:19.152833 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 25 14:09:58.141558 2022] [php7:error] [pid 40] [client 172.19.0.1:59798] script '/var/www/html/producto_imprimir.php' not found or unable to stat, referer: http://localhost/index.php
+[Mon Apr 25 15:20:47.144705 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Apr 29 10:23:51.102266 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Fri Apr 29 10:23:51.102884 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sat Apr 30 17:59:33.372311 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sat Apr 30 17:59:33.418045 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.2. Set the 'ServerName' directive globally to suppress this message
+[Thu May 05 08:56:57.762225 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Thu May 05 08:56:57.763184 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sat May 07 14:49:56.794631 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sat May 07 14:49:56.796121 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sat May 07 15:15:39.389105 2022] [php7:error] [pid 23] [client 172.19.0.1:62768] script '/var/www/html/producto_imprimir.php' not found or unable to stat
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon May 09 14:11:19.448030 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Mon May 09 14:11:19.448691 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon May 09 14:28:38.283703 2022] [autoindex:error] [pid 29] [client 172.19.0.1:63336] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1
+[Mon May 09 14:28:43.353674 2022] [autoindex:error] [pid 19] [client 172.19.0.1:63338] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1
+[Mon May 09 14:28:43.409472 2022] [autoindex:error] [pid 19] [client 172.19.0.1:63338] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1
+[Mon May 09 14:29:22.935077 2022] [autoindex:error] [pid 18] [client 172.19.0.1:63344] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1
+[Mon May 09 14:30:49.287532 2022] [autoindex:error] [pid 29] [client 172.19.0.1:63398] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1
+[Mon May 09 14:31:03.374890 2022] [autoindex:error] [pid 32] [client 172.19.0.1:63408] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1
+[Mon May 09 14:31:03.406591 2022] [autoindex:error] [pid 32] [client 172.19.0.1:63408] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1
+[Mon May 09 14:31:05.116025 2022] [autoindex:error] [pid 32] [client 172.19.0.1:63408] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1&imprimir
+[Mon May 09 14:31:59.909930 2022] [autoindex:error] [pid 21] [client 172.19.0.1:63418] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:31:59.954084 2022] [autoindex:error] [pid 21] [client 172.19.0.1:63418] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:32:43.670053 2022] [autoindex:error] [pid 31] [client 172.19.0.1:63428] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:33:27.460870 2022] [autoindex:error] [pid 21] [client 172.19.0.1:63444] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:33:27.566166 2022] [autoindex:error] [pid 30] [client 172.19.0.1:63446] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:34:44.632873 2022] [autoindex:error] [pid 26] [client 172.19.0.1:63498] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:34:45.940051 2022] [autoindex:error] [pid 32] [client 172.19.0.1:63504] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1
+[Mon May 09 14:34:48.176799 2022] [autoindex:error] [pid 32] [client 172.19.0.1:63504] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/producto.php?id=1&imprimir
+[Mon May 09 14:35:10.725441 2022] [autoindex:error] [pid 21] [client 172.19.0.1:63514] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:35:10.852241 2022] [autoindex:error] [pid 21] [client 172.19.0.1:63514] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:35:49.907488 2022] [autoindex:error] [pid 33] [client 172.19.0.1:63512] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:38:54.862289 2022] [autoindex:error] [pid 18] [client 172.19.0.1:63550] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:40:38.365693 2022] [autoindex:error] [pid 30] [client 172.19.0.1:63566] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:40:38.458189 2022] [autoindex:error] [pid 31] [client 172.19.0.1:63572] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:41:17.860625 2022] [autoindex:error] [pid 20] [client 172.19.0.1:63582] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:41:17.955506 2022] [autoindex:error] [pid 38] [client 172.19.0.1:63590] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:41:33.052502 2022] [autoindex:error] [pid 37] [client 172.19.0.1:63598] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:41:33.168649 2022] [autoindex:error] [pid 19] [client 172.19.0.1:63600] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:41:54.653180 2022] [autoindex:error] [pid 38] [client 172.19.0.1:63620] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:41:54.714179 2022] [autoindex:error] [pid 38] [client 172.19.0.1:63620] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:42:00.851973 2022] [autoindex:error] [pid 37] [client 172.19.0.1:63634] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:42:08.685934 2022] [autoindex:error] [pid 20] [client 172.19.0.1:63642] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:42:08.825431 2022] [autoindex:error] [pid 36] [client 172.19.0.1:63654] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:42:31.522461 2022] [autoindex:error] [pid 40] [client 172.19.0.1:63658] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:42:31.602807 2022] [autoindex:error] [pid 40] [client 172.19.0.1:63658] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:42:36.854951 2022] [autoindex:error] [pid 31] [client 172.19.0.1:63674] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:43:07.730675 2022] [autoindex:error] [pid 19] [client 172.19.0.1:63690] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:43:07.834740 2022] [autoindex:error] [pid 39] [client 172.19.0.1:63688] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:43:13.184405 2022] [autoindex:error] [pid 30] [client 172.19.0.1:63702] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:43:13.341685 2022] [autoindex:error] [pid 36] [client 172.19.0.1:63712] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:43:20.896767 2022] [autoindex:error] [pid 41] [client 172.19.0.1:63720] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:43:20.976480 2022] [autoindex:error] [pid 42] [client 172.19.0.1:63722] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:43:32.813484 2022] [autoindex:error] [pid 43] [client 172.19.0.1:63726] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:43:32.949599 2022] [autoindex:error] [pid 36] [client 172.19.0.1:63732] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:44:08.359164 2022] [autoindex:error] [pid 42] [client 172.19.0.1:63748] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:44:08.446781 2022] [autoindex:error] [pid 20] [client 172.19.0.1:63744] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:44:29.838982 2022] [autoindex:error] [pid 39] [client 172.19.0.1:63758] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:44:29.960545 2022] [autoindex:error] [pid 41] [client 172.19.0.1:63764] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:44:40.858557 2022] [autoindex:error] [pid 46] [client 172.19.0.1:63782] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:44:40.923974 2022] [autoindex:error] [pid 46] [client 172.19.0.1:63782] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:44:50.546541 2022] [autoindex:error] [pid 41] [client 172.19.0.1:63796] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:46:28.308468 2022] [autoindex:error] [pid 42] [client 172.19.0.1:63806] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:46:28.410548 2022] [autoindex:error] [pid 48] [client 172.19.0.1:63812] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:46:34.251546 2022] [autoindex:error] [pid 47] [client 172.19.0.1:63820] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:46:34.330133 2022] [autoindex:error] [pid 39] [client 172.19.0.1:63826] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:46:44.709209 2022] [autoindex:error] [pid 36] [client 172.19.0.1:63842] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:46:49.716303 2022] [autoindex:error] [pid 47] [client 172.19.0.1:63846] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:47:41.193664 2022] [autoindex:error] [pid 30] [client 172.19.0.1:63854] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:47:41.291221 2022] [autoindex:error] [pid 47] [client 172.19.0.1:63864] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:47:49.752270 2022] [autoindex:error] [pid 45] [client 172.19.0.1:63872] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:47:49.902862 2022] [autoindex:error] [pid 42] [client 172.19.0.1:63876] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:48:03.272996 2022] [autoindex:error] [pid 39] [client 172.19.0.1:63898] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:48:34.688773 2022] [autoindex:error] [pid 46] [client 172.19.0.1:63904] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:48:34.773752 2022] [autoindex:error] [pid 20] [client 172.19.0.1:63914] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:48:44.348351 2022] [autoindex:error] [pid 53] [client 172.19.0.1:63910] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:48:44.475628 2022] [autoindex:error] [pid 53] [client 172.19.0.1:63910] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:48:45.987392 2022] [autoindex:error] [pid 47] [client 172.19.0.1:63926] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php
+[Mon May 09 14:48:46.070513 2022] [autoindex:error] [pid 39] [client 172.19.0.1:63924] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/index.php

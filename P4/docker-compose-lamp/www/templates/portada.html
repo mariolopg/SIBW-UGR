@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+    {% block main_article %}
+        <!-- galería de productos -->
+        <div class="product-grid">
+            {% for item in gallery %}
+            <div class="product">
+                <!-- vista del producto -->
+                <div class="product-img">
+                    <a href="producto.php?id={{ item.id }}"><img src="static/image/{{ item.image_name }}" alt="Embedded Image"/>
+                        <div class="product-img-overlay"><div class="sneaker-name">{{ item.nombre }}</div></div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% endblock %}
