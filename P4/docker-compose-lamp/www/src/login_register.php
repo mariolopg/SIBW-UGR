@@ -2,28 +2,28 @@
 
     function samePasswords($pass1, $pass2){
         if($pass1 == $pass2)
-            return 1;
-        return 0;
+            return true;
+        return false;
     }
 
-    function nicknameAviable($mysqli, $nickname){
+    function nicknameAvailable($mysqli, $nickname){
         $nickname = $mysqli->real_escape_string($nickname);
-        $res = $mysqli->query("SELECT * FROM usuarios WHERE nickname=" . $nickname);
-        $aviable = 1;
+        $res = $mysqli->query("SELECT * FROM usuarios WHERE nickname='" . $nickname . "'");
+        $available = true;
         if($res->num_rows > 0){
-            $aviable = 0;
+            $available = false;
         }
-        return $aviable;
+        return $available;
     }
 
-    function emailAviable($mysqli, $email){
+    function emailAvailable($mysqli, $email){
         $email = $mysqli->real_escape_string($email);
-        $res = $mysqli->query("SELECT * FROM usuarios WHERE email=" . $email);
-        $aviable = 1;
+        $res = $mysqli->query("SELECT * FROM usuarios WHERE email='" . $email . "'");
+        $available = true;
         if($res->num_rows > 0){
-            $aviable = 0;
+            $available = false;
         }
-        return $aviable;
+        return $available;
     }
 
 
@@ -42,10 +42,10 @@
             $row = $res->fetch_assoc();
             $bdPassword = $row['password'];
             if(password_verify($password, $bdPassword)){
-                return 1;
+                return true;
             }
         }
 
-        return 0;
+        return false;
     }
 ?>

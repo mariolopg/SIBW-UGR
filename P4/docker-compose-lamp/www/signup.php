@@ -15,11 +15,11 @@
         $password1 = $_POST['signup-password1'];
         $password2 = $_POST['signup-password2'];
 
-        $nickAviable = nicknameAviable($mysqli, $nickname);
-        $emailAviable = nicknameAviable($mysqli, $email); 
+        $nickAvailable = nicknameAvailable($mysqli, $nickname);
+        $emailAvailable = emailAvailable($mysqli, $email); 
         $passwordCorrect = samePasswords($password1, $password2);
 
-        if($nickAviable && $emailAviable && $passwordCorrect){
+        if($nickAvailable && $emailAvailable && $passwordCorrect){
             registerUser($mysqli, $nickname, $email, $password1);
             session_start();
             $_SESSION['nickname'] = $nickname;
