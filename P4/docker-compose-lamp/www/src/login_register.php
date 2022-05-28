@@ -37,7 +37,7 @@
 
     // passwordSuperSeguro
     function checkLogin($mysqli, $nickname, $password){
-        $res = $mysqli->query("SELECT * FROM usuarios WHERE nickname=" . $nickname);
+        $res = $mysqli->query("SELECT * FROM usuarios WHERE nickname='" . $nickname . "'");
         if($res->num_rows > 0){
             $row = $res->fetch_assoc();
             $bdPassword = $row['password'];
