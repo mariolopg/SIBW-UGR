@@ -185,7 +185,7 @@ function checkRudeWord() {
     var ajax = new XMLHttpRequest();
     var asynchronous = true;
     
-    ajax.open("GET", "badwords.php", asynchronous);
+    ajax.open("GET", "/src/badwords.php", asynchronous);
     ajax.send();
 
     ajax.onreadystatechange = function() {
@@ -196,20 +196,18 @@ function checkRudeWord() {
             var lastWord = wordArray[wordArray.length - 2];
             var bannedWord = "";
 
-
-            for(var i = 0; i < rudeWords.length; i++)
-                if(rudeWords[i].toLowerCase() == lastWord.toLowerCase()){
-                    for(var i = 0; i < lastWord.length; i++)
+            for(var i = 0; i < rudeWords.length; i++){
+                if(rudeWords[i].toLowerCase() === lastWord.toLowerCase()){
+                    for(var j = 0; j < lastWord.length; j++)
                         bannedWord += "*";
 
                     wordArray[wordArray.length - 2] = bannedWord;
                     comment.value = "";
 
-                    for(var i = 0; i < wordArray.length - 1; i++)
-                        comment.value += wordArray[i] + " ";
-
-                    comment.value += wordArray[wordArray.length - 1];
+                    for(var j = 0; j < wordArray.length - 1; j++)
+                        comment.value += wordArray[j] + " ";
                 }
+            }
         }
     }
 }

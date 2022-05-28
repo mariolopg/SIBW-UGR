@@ -1,0 +1,60 @@
+.login-signup-cont{
+    margin-top: 20px;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.login-signup-form{
+    display: block;
+    min-width: 80%;
+    max-width: 80%;
+    height: fit-content;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 10px 10px 5px var(--primary-color);
+    -moz-box-shadow: 0 0 10px var(--primary-color);
+    -webkit-box-shadow: 0 0 10px var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+
+}
+
+.login-signup-title{
+    color: var(--primary-color);
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+    font-size: xx-large;
+}
+
+.login-signup-question{
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-signup-question a{
+    color: var(--text-color);
+    text-decoration: none;
+    width: fit-content;
+    margin: auto 0px;
+    padding: 10px;
+    display: flex;
+}
+
+.login-signup-question a span:hover{
+    color: var(--primary-color);
+    transition-duration: 0.5s;
+}
+
+.login-signup-question span a:visited{
+    color: black;
+}

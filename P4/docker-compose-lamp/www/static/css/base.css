@@ -1,5 +1,6 @@
 @import url("portada.css");
 @import url("producto.css");
+@import url("login_signup.css");
 
 :root {
     --text-color: black;

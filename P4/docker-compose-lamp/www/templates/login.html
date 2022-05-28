@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+    {% block main_article %}
+        <!-- galería de productos -->
+        <div class="login-signup-cont">
+            <div class="login-signup-form">
+                <form action="login.php" method="post">
+                    <div class="login-signup-title">
+                        <h1 class="msg">Iniciar sesión</h1>
+                    </div>
+                    <div class="form-input">
+                        <input name="login-nickname" type="text" placeholder="Introduzca su nombre de usuario">
+                    </div>
+                    <div class="form-input">
+                        <input name="login-password" type="password" placeholder="Introduzca su contraseña">
+                    </div>
+                    <div class="form-input-button">
+                        <input class="form-button" name="login-submit" type="submit" value="Iniciar sesión">
+                    </div>
+                </form>
+                <div class="login-signup-question">
+                    <a href="signup.php"><span>¿No tienes cuenta? Crear cuenta</span></a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
