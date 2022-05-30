@@ -100,4 +100,21 @@
 
         return $info;
     }
+
+    function getUser($mysqli, $user){
+        $res = $mysqli->prepare("SELECT * FROM usuarios WHERE nickname = ?");
+        $res->bind_param("s", $user);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
+
+        if($res->num_rows > 0){
+            $row = $res->fetch_assoc();
+        }
+
+        return $row;
+    }
 ?>

@@ -28,47 +28,50 @@
             {{ info.descripcion }}
         </p>
 
-        <div class="comment-link" id="id-comment-link">
-            <span>Comentarios </span>
-            <i class="fa-solid fa-caret-right" id="comment-arrow"></i>
-        </div>
+        {% if user %}
+            <div class="comment-link" id="id-comment-link">
+                <span>Comentarios </span>
+                <i class="fa-solid fa-caret-right" id="comment-arrow"></i>
+            </div>
 
-        <div class="comment-form-container" id="id-comment-form-container">
-            <div class="comments">
-                <ul class="ul-list-comment" id="id-ul-list-comment">
-                    {% for comment in comments %}
-                        <li class="li-list-comment"> 
-                            <div class="comentario">
-                                <div class="autor-fecha">
-                                    <span class="autor">{{ comment['user'] }}</span>
-                                    <span class="fecha">{{ comment['date'] }}</span>
+            <div class="comment-form-container" id="id-comment-form-container">
+                <div class="comments">
+                    <ul class="ul-list-comment" id="id-ul-list-comment">
+                        {% for comment in comments %}
+                            <li class="li-list-comment"> 
+                                <div class="comentario">
+                                    <div class="autor-fecha">
+                                        <span class="autor">{{ comment['user'] }}</span>
+                                        <span class="fecha">{{ comment['date'] }}</span>
+                                    </div>
+                                    <div class="div-resena">
+                                        <span class="resena">{{ comment['comment'] }}</span>
+                                    </div>
                                 </div>
-                                <div class="div-resena">
-                                    <span class="resena">{{ comment['comment'] }}</span>
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                </ul>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="formulario">
+                    <form>
+                        <div class="form-input">
+                            <input id="input-name" type="text" placeholder="Introduzca su nombre">
+                        </div>
+                        <div class="form-input">
+                            <input id="input-mail" type="text" placeholder="Introduzca su correo electrónico">
+                        </div>
+                        <div class="form-input">
+                            <textarea id="input-comment" placeholder="Introduzca su comentario..."></textarea>
+                        </div>
+                        <div class="form-input-button">
+                            <input class="form-button" id="input-submit" type="button" value="Enviar">
+                            <input class="form-button" id="input-reset" type="reset">
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="formulario">
-                <form>
-                    <div class="form-input">
-                        <input id="input-name" type="text" placeholder="Introduzca su nombre">
-                    </div>
-                    <div class="form-input">
-                        <input id="input-mail" type="text" placeholder="Introduzca su correo electrónico">
-                    </div>
-                    <div class="form-input">
-                        <textarea id="input-comment" placeholder="Introduzca su comentario..."></textarea>
-                    </div>
-                    <div class="form-input-button">
-                        <input class="form-button" id="input-submit" type="button" value="Enviar">
-                        <input class="form-button" id="input-reset" type="reset">
-                    </div>
-                </form>
-            </div>
-        </div>
+        {% endif %}
+        
     {% endblock %}
     {% block scripts %}
         <script src="static/js/producto.js"></script>

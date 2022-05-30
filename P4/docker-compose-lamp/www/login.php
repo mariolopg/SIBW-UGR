@@ -15,7 +15,7 @@
 
         if(checkLogin($mysqli, $nickname, $password) && !empty($nickname) && !empty($password)){
             session_start();
-            $_SESSION['nickname'] = $nickname;
+            $_SESSION['user'] = $nickname;
             
             header("Location: index.php");
             exit();

@@ -6,6 +6,8 @@
     $loader = new \Twig\Loader\FilesystemLoader('templates');
     $twig = new \Twig\Environment($loader);
 
+    session_start();
+
     $mysqli = conectar();
 
     $id = -1;
@@ -23,5 +25,9 @@
     $images = getImages($mysqli, $id);
     $comments = getComments($mysqli, $id);
 
-    echo $twig->render($link, ['info' => $info, 'images' => $images, 'comments' => $comments]);
+    if (isset($_SESSION['user'])) {
+        $user = getUser($mysqli, $_SESSION['user']);
+    }
+
+    echo $twig->render($link, ['info' => $info, 'images' => $images, 'comments' => $comments, 'user' => $user]);
 ?>

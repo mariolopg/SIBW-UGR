@@ -24,7 +24,7 @@
             if($nickAvailable && $emailAvailable && $passwordCorrect){
                 registerUser($mysqli, $nickname, $email, $password1);
                 session_start();
-                $_SESSION['nickname'] = $nickname;
+                $_SESSION['user'] = $nickname;
                 
                 header("Location: index.php");
                 exit();

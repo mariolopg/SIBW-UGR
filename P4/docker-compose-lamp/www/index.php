@@ -11,6 +11,10 @@
     $mysqli = conectar();
     
     $gallery = getGallery($mysqli);
+
+    if (isset($_SESSION['user'])) {
+        $user = getUser($mysqli, $_SESSION['user']);
+    }
     
-    echo $twig->render('portada.html', ['gallery' => $gallery]);
+    echo $twig->render('portada.html', ['gallery' => $gallery, 'user' => $user]);
 ?>
