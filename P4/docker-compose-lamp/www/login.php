@@ -2,7 +2,7 @@
     require_once "/usr/local/lib/php/vendor/autoload.php";
     include("src/connect.php");
     include("src/bd.php");
-    include("src/login_register.php");
+    include("src/user.php");
 
     $loader = new \Twig\Loader\FilesystemLoader('templates');
     $twig = new \Twig\Environment($loader);
