@@ -1,5 +1,4 @@
 <?php
-
     function conectar(){
         $mysql = new mysqli("mysql", "admin", "SIBW2022", "sneakers");
         if($mysqli->connect_errno) {
@@ -7,5 +6,4 @@
         }
         return $mysql;
     }
-    
 ?>

@@ -7,8 +7,15 @@
     }
 
     function nicknameAvailable($mysqli, $nickname){
-        $nickname = $mysqli->real_escape_string($nickname);
-        $res = $mysqli->query("SELECT * FROM usuarios WHERE nickname='" . $nickname . "'");
+        $res = $mysqli->prepare("SELECT * FROM usuarios WHERE nickname =?");
+        $res->bind_param("s", $nickname);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
+
         $available = true;
         if($res->num_rows > 0){
             $available = false;
@@ -17,8 +24,15 @@
     }
 
     function emailAvailable($mysqli, $email){
-        $email = $mysqli->real_escape_string($email);
-        $res = $mysqli->query("SELECT * FROM usuarios WHERE email='" . $email . "'");
+        $res = $mysqli->prepare("SELECT * FROM usuarios WHERE email=?");
+        $res->bind_param("s", $email);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
+
         $available = true;
         if($res->num_rows > 0){
             $available = false;
@@ -28,16 +42,21 @@
 
 
     function registerUser($mysqli, $nickname, $email, $pass){
-        $nickname = $mysqli->real_escape_string($nickname);
-        $email = $mysqli->real_escape_string($email);
-        $pass = $mysqli->real_escape_string($pass);
         $pass = password_hash($pass, PASSWORD_DEFAULT);
-        $mysqli->query("INSERT INTO usuarios (nickname email password rol) VALUES(" . $nickname . "," . $email . "," . $pass . ", default)");
+        $mysqli->query("INSERT INTO usuarios (nickname, email, password, rol) VALUES('" . $nickname . "','" . $email . "','" . $pass . "', 'default')");
     }
 
     // passwordSuperSeguro
     function checkLogin($mysqli, $nickname, $password){
-        $res = $mysqli->query("SELECT * FROM usuarios WHERE nickname='" . $nickname . "'");
+        $res = $mysqli->prepare("SELECT * FROM usuarios WHERE nickname=?");
+        $res->bind_param("s", $nickname);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
+
         if($res->num_rows > 0){
             $row = $res->fetch_assoc();
             $bdPassword = $row['password'];

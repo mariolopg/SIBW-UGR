@@ -1,7 +1,13 @@
 <?php
-    function getInfo($id, $mysqli){
-        $id = $mysqli->real_escape_string($id);
-        $res = $mysqli->query("SELECT * FROM sneakersInfo WHERE id=" . $id);
+    function getInfo($mysqli, $id){
+        $res = $mysqli->prepare("SELECT * FROM sneakersInfo WHERE id = ?");
+        $res->bind_param("i", $id);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
 
         $nombre = 'no_name';
         $descripcion = 'no_description';
@@ -19,8 +25,15 @@
         return ['id' => $id, 'nombre' => $nombre, 'descripcion' => $descripcion, 'precio' => $precio, 'valoraciones' => $valoraciones];
     }
 
-    function getImages($id, $mysqli){
-        $res = $mysqli->query("SELECT image_name FROM sneakersImages WHERE id_sneaker=" . $id);
+    function getImages($mysqli, $id){
+        $res = $mysqli->prepare("SELECT image_name FROM sneakersImages WHERE id_sneaker = ?");
+        $res->bind_param("i", $id);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
 
         $rows = array();
         $info = array();
@@ -38,9 +51,15 @@
         return $info;
     }
 
-    function getComments($id, $mysqli){
-        $id = $mysqli->real_escape_string($id);
-        $res = $mysqli->query("SELECT * FROM sneakersComments WHERE id_sneaker=" . $id);
+    function getComments($mysqli, $id){
+        $res = $mysqli->prepare("SELECT * FROM sneakersComments WHERE id_sneaker = ?");
+        $res->bind_param("i", $id);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
 
         $rows = array();
         $info = array();
@@ -74,8 +93,8 @@
 
 
         for($i = 1; $i <= $numFilas; $i++){
-            $name = getInfo($i, $mysqli);
-            $images = getImages($i, $mysqli);
+            $name = getInfo($mysqli, $i);
+            $images = getImages($mysqli, $i);
             $info[$i] = ['id' => $name['id'], 'nombre' => $name['nombre'], 'image_name' => $images[0]['image_name']];
         }
 

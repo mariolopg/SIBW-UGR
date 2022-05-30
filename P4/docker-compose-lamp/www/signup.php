@@ -15,17 +15,20 @@
         $password1 = $_POST['signup-password1'];
         $password2 = $_POST['signup-password2'];
 
-        $nickAvailable = nicknameAvailable($mysqli, $nickname);
-        $emailAvailable = emailAvailable($mysqli, $email); 
-        $passwordCorrect = samePasswords($password1, $password2);
+        if(!empty($nickname) && !empty($email) && !empty($password1)){
 
-        if($nickAvailable && $emailAvailable && $passwordCorrect){
-            registerUser($mysqli, $nickname, $email, $password1);
-            session_start();
-            $_SESSION['nickname'] = $nickname;
-            
-            header("Location: index.php");
-            exit();
+            $nickAvailable = nicknameAvailable($mysqli, $nickname);
+            $emailAvailable = emailAvailable($mysqli, $email); 
+            $passwordCorrect = samePasswords($password1, $password2);
+
+            if($nickAvailable && $emailAvailable && $passwordCorrect){
+                registerUser($mysqli, $nickname, $email, $password1);
+                session_start();
+                $_SESSION['nickname'] = $nickname;
+                
+                header("Location: index.php");
+                exit();
+            }
         }
     }
 

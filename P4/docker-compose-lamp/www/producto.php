@@ -19,9 +19,9 @@
         $link = 'producto_imprimir.html';
     };
 
-    $info = getInfo($id, $mysqli);
-    $images = getImages($id, $mysqli);
-    $comments = getComments($id, $mysqli);
+    $info = getInfo($mysqli, $id);
+    $images = getImages($mysqli, $id);
+    $comments = getComments($mysqli, $id);
 
     echo $twig->render($link, ['info' => $info, 'images' => $images, 'comments' => $comments]);
 ?>

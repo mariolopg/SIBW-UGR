@@ -13,7 +13,7 @@
         $nickname = $_POST['login-nickname'];
         $password = $_POST['login-password'];
 
-        if(checkLogin($mysqli, $nickname, $password)){
+        if(checkLogin($mysqli, $nickname, $password) && !empty($nickname) && !empty($password)){
             session_start();
             $_SESSION['nickname'] = $nickname;
             
