@@ -86,7 +86,14 @@ function getSpan(id, classname, alerta) {
 
 function getFecha() {
     var fecha = new Date();
-    return (fecha.getUTCDate() + "/" + (fecha.getUTCMonth() + 1) + "/" + fecha.getFullYear());
+    return (parseFecha(fecha.getUTCDate()) + "-" + (parseFecha(fecha.getUTCMonth() + 1)) + "-" + parseFecha(fecha.getFullYear()));
+}
+
+function parseFecha(date){
+    if(date < 10){
+        return "0" + date;
+    }
+    return date;
 }
 
 function displayCommentsForm() {
@@ -173,10 +180,30 @@ function addComment() {
 
     if(canAddComment()){
         list.prepend(li);
+        uploadComment();
         clearInput("input-name");
         clearInput("input-mail");
         clearInput("input-comment");
     }
+}
+
+function uploadComment() {
+    var author = document.getElementById("input-name").value;
+    var email = document.getElementById("input-mail").value;
+    var comment = document.getElementById("input-comment").value;
+    var fecha = getFecha();
+    var id_sneaker = document.getElementById("id-sneaker").value
+
+    var newComment = [id_sneaker, author, email, comment, fecha];
+
+    var comment = JSON.stringify(newComment);
+
+    var ajax = new XMLHttpRequest();
+    var asynchronous = true;
+    
+    ajax.open("POST", "add_comment.php", asynchronous);
+    ajax.setRequestHeader("Content-type", "application/json")
+    ajax.send(comment);
 }
 
 function checkRudeWord() {

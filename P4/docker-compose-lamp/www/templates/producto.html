@@ -42,7 +42,7 @@
                                 <div class="comentario">
                                     <div class="autor-fecha">
                                         <span class="autor">{{ comment['user'] }}</span>
-                                        <span class="fecha">{{ comment['date'] }}</span>
+                                        <span class="fecha">{{ comment['fecha'] }}</span>
                                     </div>
                                     <div class="div-resena">
                                         <span class="resena">{{ comment['comment'] }}</span>
@@ -63,6 +63,7 @@
                         <div class="form-input">
                             <textarea id="input-comment" placeholder="Introduzca su comentario..."></textarea>
                         </div>
+                        <input class="hidden" id="id-sneaker" type="text" value="{{ info.id }}">
                         <div class="form-input-button">
                             <input class="form-button" id="input-submit" type="button" value="Enviar">
                             <input class="form-button" id="input-reset" type="reset">

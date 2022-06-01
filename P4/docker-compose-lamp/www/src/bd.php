@@ -52,7 +52,7 @@
     }
 
     function getComments($mysqli, $id){
-        $res = $mysqli->prepare("SELECT * FROM sneakersComments WHERE id_sneaker = ?");
+        $res = $mysqli->prepare("SELECT * FROM sneakersComments WHERE id_sneaker = ? ORDER BY id DESC");
         $res->bind_param("i", $id);
 
         if(!$res->execute()){
@@ -70,7 +70,7 @@
             }
             
             foreach ($rows as $key => $row) {
-                $info[$key] = ['user' => $row['user'], 'comment' => $row['comment'], 'date' => date('d/m/Y', strtotime($row['date']))];
+                $info[$key] = ['user' => $row['user'], 'comment' => $row['comment'], 'fecha' => $row['fecha']];
             }
         }
         
