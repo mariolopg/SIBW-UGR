@@ -52,4 +52,19 @@
             echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
         }
     }
+
+    function getAllDBComments($mysqli){
+        $res = $mysqli->query("SELECT * from sneakersComments ORDER BY id DESC");
+
+        $rows = array();
+
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()){
+                $rows[] = $row;
+            }
+        }
+        
+        return $rows;
+    }
+    
 ?>

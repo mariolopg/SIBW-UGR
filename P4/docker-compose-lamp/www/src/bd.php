@@ -113,4 +113,18 @@
 
         return $row;
     }
+
+    function getRoles($mysqli){
+        $res = $mysqli->query("SELECT * FROM roles");
+
+        $rows = array();
+
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()){
+                $rows[] = $row;
+            }
+        }
+        
+        return $rows;
+    }
 ?>

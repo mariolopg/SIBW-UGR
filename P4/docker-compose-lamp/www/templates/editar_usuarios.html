@@ -25,30 +25,13 @@
                         <div class="form-input">
                             <label for="new-rol">Nuevo tipo de usuario:</label>
                             <select class="rol-dropdown"id="nrew-rol" name="new-rol">
-                                {% if userAEditar.rol == "default" %}
-                                    <option value="default" selected="selected">default</option>
-                                    <option value="moderador">moderador</option>
-                                    <option value="gestor">gestor</option>
-                                    <option value="superuser">superusuario</option>
-                                {% endif %}
-                                {% if userAEditar.rol == "moderador" %}
-                                    <option value="default">default</option>
-                                    <option value="moderador" selected="selected">moderador</option>
-                                    <option value="gestor">gestor</option>
-                                    <option value="superuser">superusuario</option>
-                                {% endif %}
-                                {% if userAEditar.rol == "gestor" %}
-                                    <option value="default">default</option>
-                                    <option value="moderador">moderador</option>
-                                    <option value="gestor" selected="selected">gestor</option>
-                                    <option value="superuser">superusuario</option>
-                                {% endif %}
-                                {% if userAEditar.rol == "superuser" %}
-                                    <option value="default">default</option>
-                                    <option value="moderador">moderador</option>
-                                    <option value="gestor">gestor</option>
-                                    <option value="superuser" selected="selected">superusuario</option>
-                                {% endif %}
+                                {% for rol in roles %}
+                                    {% if userAEditar.rol == rol.nombre %}
+                                        <option value="{{ rol.nombre }}" selected="selected">{{ rol.nombre }}</option>
+                                    {% else %}
+                                        <option value="{{ rol.nombre }}">{{ rol.nombre }}</option>
+                                    {% endif %}
+                                {% endfor %}
                             </select>
                         </div>
                         <input class="hidden" name="user-nickname" type="text" value="{{userAEditar.nickname}}">

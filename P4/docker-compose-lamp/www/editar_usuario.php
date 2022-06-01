@@ -19,6 +19,8 @@
         if(isset($_GET['nickname'])){
             $userAEditar = getUser($mysqli, $_GET['nickname']);
         };
+
+        $roles = getRoles($mysqli);
     
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $newNickname = $_POST['new-nickname'];
@@ -54,6 +56,6 @@
             }
         }
          
-        echo $twig->render('editar_usuarios.html', ['user' => $user, 'userAEditar' => $userAEditar]);
+        echo $twig->render('editar_usuarios.html', ['user' => $user, 'userAEditar' => $userAEditar, 'roles' => $roles]);
     }
 ?>
