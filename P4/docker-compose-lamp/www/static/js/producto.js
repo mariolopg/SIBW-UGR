@@ -183,12 +183,11 @@ function addComment() {
 }
 
 function uploadComment() {
-    var user_id = document.getElementById("user-id").value;
     var comment = document.getElementById("input-comment").value;
     var fecha = getFecha();
     var id_sneaker = document.getElementById("id-sneaker").value
 
-    var newComment = [id_sneaker, user_id, comment, fecha];
+    var newComment = [id_sneaker, comment, fecha];
 
     var comment = JSON.stringify(newComment);
 

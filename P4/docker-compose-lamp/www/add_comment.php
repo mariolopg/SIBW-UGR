@@ -15,11 +15,11 @@
         $user = getUser($mysqli, $_SESSION['user']);
     }
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && $user){
         $comment = json_decode(file_get_contents('php://input'));
 
         if($user){
-            addComment($mysqli, $comment[0], $comment[1], $comment[2], $comment[3]);
+            addComment($mysqli, $comment[0], $user['id'], $comment[1], $comment[2]);
         }
     }
 ?>
