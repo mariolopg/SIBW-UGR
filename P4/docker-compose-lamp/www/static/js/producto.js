@@ -177,7 +177,6 @@ function addComment() {
     if(canAddComment()){
         list.prepend(li);
         uploadComment();
-        clearInput("input-name");
         clearInput("input-comment");
     }
 }

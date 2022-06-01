@@ -294,3 +294,17 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
 [Wed Jun 01 16:18:02.934417 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
 [Wed Jun 01 16:18:02.935233 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jun 01 16:21:47.872607 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 01 16:25:30.442498 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Jun 01 16:25:30.443866 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jun 01 16:32:05.205882 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 01 18:54:57.866660 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Jun 01 18:54:57.867510 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jun 01 19:48:27.101179 2022] [php7:error] [pid 57] [client 172.19.0.1:55554] script '/var/www/html/borrar_comentario.php' not found or unable to stat, referer: http://localhost/producto.php?id=1
+[Wed Jun 01 19:48:51.131056 2022] [php7:error] [pid 47] [client 172.19.0.1:55572] script '/var/www/html/borrar_comentario.php' not found or unable to stat, referer: http://localhost/producto.php?id=1
+[Wed Jun 01 19:48:56.364016 2022] [php7:error] [pid 47] [client 172.19.0.1:55572] script '/var/www/html/borrar_comement.php' not found or unable to stat, referer: http://localhost/producto.php?id=1
+[Wed Jun 01 20:42:20.511941 2022] [php7:error] [pid 56] [client 172.19.0.1:55910] script '/var/www/html/editar_comment.php' not found or unable to stat, referer: http://localhost/edit_comment.php?id=38
+[Wed Jun 01 20:43:51.234347 2022] [php7:error] [pid 56] [client 172.19.0.1:55974] script '/var/www/html/editar_comment.php' not found or unable to stat, referer: http://localhost/edit_comment.php?id=38
+[Wed Jun 01 20:44:05.464995 2022] [php7:error] [pid 49] [client 172.19.0.1:55976] script '/var/www/html/editar_comment.php' not found or unable to stat, referer: http://localhost/edit_comment.php?id=38

@@ -68,7 +68,6 @@
     }
 
     function actualizarDatos($mysqli, $nickname, $newData, $column){
-        // TODO: si la columna es rol => comprobar que no es superusuario / si es el único no se puede cambiar
         $puedeCambiar = true;
         if($column == "rol"){
             $usuario = getUser($mysqli, $nickname);

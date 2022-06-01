@@ -182,6 +182,12 @@ article p{
     margin-top: 10px
 }
 
+.moderado {
+    font-size: small;
+    color: gray;
+    font-style: italic;
+}
+
 .formulario{
     margin-top: 30px;
     display: flex;
@@ -224,4 +230,48 @@ article p{
 .form-input textarea{
     resize: none;
 }
+
+.div-moderador {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.comment-edit-button{
+    text-decoration: none;
+    background-color: var(--primary-color);
+    margin: auto 5px 0px 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.delete {
+    border: 1px solid rgb(157, 15, 15);
+    background-color: rgb(157, 15, 15);
+}
+
+.comment-edit-button a{
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.comment-edit-button a:hover{
+    color: black;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    background-color: var(--button-color);
+}
+
+.delete a:hover{
+    color: black;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    background-color: rgb(202, 68, 68);
+}
+
 
