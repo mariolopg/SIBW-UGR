@@ -15,7 +15,7 @@
         $password1 = $_POST['signup-password1'];
         $password2 = $_POST['signup-password2'];
 
-        if(!empty($nickname) && !empty($email) && !empty($password1)){
+        if(!empty($nickname) && !empty($email) && !empty($password1) && checkEmail($email)){
 
             $nickAvailable = nicknameAvailable($mysqli, $nickname);
             $emailAvailable = emailAvailable($mysqli, $email); 

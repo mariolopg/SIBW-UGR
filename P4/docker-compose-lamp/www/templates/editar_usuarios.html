@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+    {% block main_article %}
+        {% if user.rol == "superuser" %}
+            <div class="login-signup-cont">
+                <div class="login-signup-form">
+                    <form action="editar_usuario.php" method="post">
+                        <div class="login-signup-title">
+                            <h1 class="msg">Editar usuario</h1>
+                        </div>
+                        <div class="form-input">
+                            <span class="info-span">Nombre de usuario: {{ userAEditar.nickname }}</span>
+                        </div>
+                        <div class="form-input">
+                            <input name="new-nickname" type="text" placeholder="Nuevo nombre de usuario">
+                        </div>
+                        <div class="form-input">
+                            <span class="info-span">Correo electrónico: {{ userAEditar.email }}</span>
+                        </div>
+                        <div class="form-input">
+                            <input name="new-email" type="email" placeholder="Nuevo correo">
+                        </div>
+                        <div class="form-input">
+                            <span class="info-span">Tipo de usuario: {{ userAEditar.rol }}</span>
+                        </div>
+                        <div class="form-input">
+                            <label for="new-rol">Nuevo tipo de usuario:</label>
+                            <select class="rol-dropdown"id="nrew-rol" name="new-rol">
+                                {% if userAEditar.rol == "default" %}
+                                    <option value="default" selected="selected">default</option>
+                                    <option value="moderador">moderador</option>
+                                    <option value="gestor">gestor</option>
+                                    <option value="superuser">superusuario</option>
+                                {% endif %}
+                                {% if userAEditar.rol == "moderador" %}
+                                    <option value="default">default</option>
+                                    <option value="moderador" selected="selected">moderador</option>
+                                    <option value="gestor">gestor</option>
+                                    <option value="superuser">superusuario</option>
+                                {% endif %}
+                                {% if userAEditar.rol == "gestor" %}
+                                    <option value="default">default</option>
+                                    <option value="moderador">moderador</option>
+                                    <option value="gestor" selected="selected">gestor</option>
+                                    <option value="superuser">superusuario</option>
+                                {% endif %}
+                                {% if userAEditar.rol == "superuser" %}
+                                    <option value="default">default</option>
+                                    <option value="moderador">moderador</option>
+                                    <option value="gestor">gestor</option>
+                                    <option value="superuser" selected="selected">superusuario</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                        <input class="hidden" name="user-nickname" type="text" value="{{userAEditar.nickname}}">
+                        <div class="form-input-button">
+                            <input class="form-button" name="actualizar-submit" type="submit" value="Actualizar">
+                        </div>
+                    </form>
+                    <div class="login-signup-question">
+                        <a href="usuarios.php"><span>Cancelar</span></a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endblock %}

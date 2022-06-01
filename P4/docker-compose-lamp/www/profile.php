@@ -22,19 +22,20 @@
         if(!empty($newNickname) || !empty($newEmail) || (!empty($password1) && !empty($password2))){
             if(nicknameAvailable($mysqli, $nickname) && !empty($newNickname)){
                 $modificacion = true;
-                actualizarNickname($mysqli, $user, $newNickname);
+                actualizarDatos($mysqli, $user, $newNickname, "nickname");
                 session_start();
                 $_SESSION['user'] = $newNickname;
             }
 
-            if(emailAvailable($mysqli, $newEmail) && !empty($newEmail)){
+            if(emailAvailable($mysqli, $newEmail) && !empty($newEmail) && checkEmail($newEmail)){
                 $modificacion = true;
-                actualizarEmail($mysqli, $user, $newEmail);
+                actualizarDatos($mysqli, $user, $newEmail, "email");
             }
 
             if(samePasswords($password1, $password2) && !empty($password1)){
                 $modificacion = true;
-                actualizarPassword($mysqli, $user, $password1);
+                $newPassword = hashPassword($password1);
+                actualizarDatos($mysqli, $user, $newPassword, "password");
             }
 
             if($modificacion){
@@ -43,6 +44,10 @@
             }
         }
     }
+
+    if (isset($_SESSION['user'])) {
+        $user = getUser($mysqli, $_SESSION['user']);
+    }
      
-    echo $twig->render('profile.html');
+    echo $twig->render('profile.html', ['user' => $user]);
 ?>
