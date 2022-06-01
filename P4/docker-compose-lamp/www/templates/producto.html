@@ -41,7 +41,11 @@
                             <li class="li-list-comment"> 
                                 <div class="comentario">
                                     <div class="autor-fecha">
-                                        <span class="autor">{{ comment['user'] }}</span>
+                                        {% for item in usuarios %}
+                                            {% if comment['user_id'] == item['id'] %}
+                                                <span class="autor">{{ item['nickname'] }}</span>
+                                            {% endif %}
+                                        {% endfor %}
                                         <span class="fecha">{{ comment['fecha'] }}</span>
                                     </div>
                                     <div class="div-resena">
@@ -54,12 +58,9 @@
                 </div>
                 <div class="formulario">
                     <form>
-                        <div class="form-input">
-                            <input id="input-name" type="text" placeholder="Introduzca su nombre">
-                        </div>
-                        <div class="form-input">
-                            <input id="input-mail" type="text" placeholder="Introduzca su correo electrónico">
-                        </div>
+                        <input class="hidden" id="user-id" type="text" value="{{ user.id }}">
+                        <input class="hidden" id="input-name" type="text" value="{{ user.nickname }}">
+                        <input class="hidden" id="input-mail" type="text" value="">
                         <div class="form-input">
                             <textarea id="input-comment" placeholder="Introduzca su comentario..."></textarea>
                         </div>

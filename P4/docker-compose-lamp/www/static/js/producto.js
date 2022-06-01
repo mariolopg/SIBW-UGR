@@ -2,10 +2,6 @@ window.onload = function (){
     document.getElementById("id-comment-link").addEventListener("click", displayCommentsForm);
     document.getElementById("input-submit").addEventListener("click", addComment);
     document.getElementById("input-comment").addEventListener("keypress", checkWord);
-
-    // Generate comments
-    // generateComment("Juan", "Estas zapatillas son muy cómodas.");
-    // generateComment("Pablo", "Me llegaron a tiempo. Un poco caras.");
 };
 
 function generateComment(autor, comment) {
@@ -164,7 +160,7 @@ function checkEmail() {
 
 function canAddComment() {
     // · Autor, correo o comentario incorrecto return false
-    if(!checkEmail() || isInputEmpty("input-name") || isInputEmpty("input-comment")){
+    if(isInputEmpty("input-comment")){
         return false;
     }
 
@@ -182,19 +178,17 @@ function addComment() {
         list.prepend(li);
         uploadComment();
         clearInput("input-name");
-        clearInput("input-mail");
         clearInput("input-comment");
     }
 }
 
 function uploadComment() {
-    var author = document.getElementById("input-name").value;
-    var email = document.getElementById("input-mail").value;
+    var user_id = document.getElementById("user-id").value;
     var comment = document.getElementById("input-comment").value;
     var fecha = getFecha();
     var id_sneaker = document.getElementById("id-sneaker").value
 
-    var newComment = [id_sneaker, author, email, comment, fecha];
+    var newComment = [id_sneaker, user_id, comment, fecha];
 
     var comment = JSON.stringify(newComment);
 

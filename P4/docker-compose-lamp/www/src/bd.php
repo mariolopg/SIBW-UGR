@@ -68,13 +68,9 @@
             while($row = $res->fetch_assoc()){
                 $rows[] = $row;
             }
-            
-            foreach ($rows as $key => $row) {
-                $info[$key] = ['user' => $row['user'], 'comment' => $row['comment'], 'fecha' => $row['fecha']];
-            }
         }
         
-        return $info;
+        return $rows;
     }
 
     function getBadWords($mysqli){

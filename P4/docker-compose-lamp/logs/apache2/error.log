@@ -286,3 +286,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Wed Jun 01 13:54:00.496354 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
 [Wed Jun 01 13:54:00.497419 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Wed Jun 01 13:59:32.624674 2022] [php7:error] [pid 26] [client 172.19.0.1:55464] script '/var/www/html/src/add_comment.php' not found or unable to stat, referer: http://localhost/producto.php?id=1
+[Wed Jun 01 15:24:45.115899 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 01 15:34:58.510304 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Wed Jun 01 15:34:58.511698 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
