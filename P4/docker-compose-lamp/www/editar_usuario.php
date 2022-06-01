@@ -30,6 +30,9 @@
     
             if(!empty($newNickname) || !empty($newEmail) || ($newRol != $userAEditar['rol'])){
                 if(nicknameAvailable($mysqli, $newNickname) && !empty($newNickname)){
+                    if($userAEditar['nickname'] == $user['nickname']){
+                        $_SESSION['user'] = $newNickname;
+                    }
                     $modificacion = true;
                     actualizarDatos($mysqli, $userNickname, $newNickname, "nickname");
                 }
