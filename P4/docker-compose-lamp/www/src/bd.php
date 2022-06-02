@@ -84,14 +84,12 @@
     }
 
     function getGallery($mysqli){
-        $numFilas = $mysqli->query("SELECT name FROM sneakersInfo")->num_rows;
+        $res = $mysqli->query("SELECT * FROM sneakersInfo");
         $info = array();
-
-
-        for($i = 1; $i <= $numFilas; $i++){
-            $name = getInfo($mysqli, $i);
-            $images = getImages($mysqli, $i);
-            $info[$i] = ['id' => $name['id'], 'nombre' => $name['nombre'], 'image_name' => $images[0]['image_name']];
+        while($row = $res->fetch_assoc()){
+            $name = getInfo($mysqli, $row['id']);
+            $images = getImages($mysqli, $row['id']);
+            $info[] = ['id' => $name['id'], 'nombre' => $name['nombre'], 'image_name' => $images[0]['image_name']];
         }
 
         return $info;
@@ -126,5 +124,28 @@
         }
         
         return $rows;
+    }
+
+    function addProduct($mysqli, $name, $description, $price){
+        $mysqli->query("INSERT INTO sneakersInfo (name, description, precio, valoraciones) VALUES('" . $name . "','" . $description . "','" . intval($price) . "', 0)");
+        $res = $mysqli->query("SELECT * FROM sneakersInfo ORDER BY id DESC LIMIT 0, 1");
+        
+        if($res->num_rows > 0){
+            $row = $res->fetch_assoc();
+            $id = $row['id'];
+        }
+
+        return $id;
+    }
+    
+    function addImage($mysqli, $id, $nombreImagen){
+        $res = $mysqli->prepare("INSERT INTO sneakersImages (id_sneaker, image_name) VALUES(?,?)");
+        $res->bind_param("is", $id, $nombreImagen);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res->close();
     }
 ?>

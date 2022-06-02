@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+    {% block main_article %}
+        <div class="login-signup-cont">
+            <div class="login-signup-form">
+                <form action="add_product.php" method="post" enctype="multipart/form-data">
+                    <div class="login-signup-title">
+                        <h1 class="msg">Añadir producto</h1>
+                    </div>
+                    <div class="form-input">
+                        <input name="sneaker-name" type="text" placeholder="Introduzca el nombre del producto">
+                    </div>
+                    <div class="form-input">
+                        <input name="sneaker-description" type="textarea" placeholder="Introduzca la descripción del producto">
+                    </div>
+                    <div class="form-input">
+                        <input name="sneaker-price" type="text" placeholder="Introduzca el precio del producto">
+                    </div>
+                    <div class="form-input">
+                        <input name="sneaker-images" type="file" placeholder="Introduzca la imagen del producto">
+                    </div>
+                    <div class="form-input-button">
+                        <input class="form-button" name="login-submit" type="submit" value="Añadir producto">
+                    </div>
+                </form>
+                <div class="login-signup-question">
+                    <a href="index.php"><span>Cancelar</span></a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
