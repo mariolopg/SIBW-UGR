@@ -15,7 +15,7 @@
         $user = getUser($mysqli, $_SESSION['user']);
     }
 
-    if($user['rol'] == "superuser" || $user['rol'] == "moderador"){
+    if($user['rol'] == "superuser" || $user['rol'] == "gestor"){
     
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $sneakerName = $_POST['sneaker-name'];
