@@ -308,3 +308,7 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Wed Jun 01 20:42:20.511941 2022] [php7:error] [pid 56] [client 172.19.0.1:55910] script '/var/www/html/editar_comment.php' not found or unable to stat, referer: http://localhost/edit_comment.php?id=38
 [Wed Jun 01 20:43:51.234347 2022] [php7:error] [pid 56] [client 172.19.0.1:55974] script '/var/www/html/editar_comment.php' not found or unable to stat, referer: http://localhost/edit_comment.php?id=38
 [Wed Jun 01 20:44:05.464995 2022] [php7:error] [pid 49] [client 172.19.0.1:55976] script '/var/www/html/editar_comment.php' not found or unable to stat, referer: http://localhost/edit_comment.php?id=38
+[Wed Jun 01 21:35:39.812184 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 02 07:30:30.748043 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Thu Jun 02 07:30:30.748708 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'

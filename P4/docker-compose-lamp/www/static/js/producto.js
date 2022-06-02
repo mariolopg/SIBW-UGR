@@ -1,7 +1,7 @@
 window.onload = function (){
+    document.getElementById("input-comment").addEventListener("keypress", checkWord);
     document.getElementById("id-comment-link").addEventListener("click", displayCommentsForm);
     document.getElementById("input-submit").addEventListener("click", addComment);
-    document.getElementById("input-comment").addEventListener("keypress", checkWord);
 };
 
 function generateComment(autor, comment) {

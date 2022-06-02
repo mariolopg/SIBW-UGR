@@ -8,7 +8,7 @@
                             <h1 class="msg">Editar comentario</h1>
                         </div>
                         <div class="form-input">
-                            <input name="new-comment" type="text" placeholder="{{ comment.comment }} ...">
+                            <input id="input-comment" name="new-comment" type="textarea" placeholder="{{ comment.comment }} ...">
                         </div>                      
                         <input class="hidden" name="id-comment" type="text" value="{{ comment.id }}">
                         <div class="form-input-button">
@@ -21,4 +21,7 @@
                 </div>
             </div>
         {% endif %}
+    {% endblock %}
+    {% block scripts %}
+        <script src="static/js/producto.js"></script>
     {% endblock %}
