@@ -218,6 +218,13 @@ article p{
     border: 2px solid var(--primary-color);
 }
 
+.form-input span {
+    width: 50%;
+    padding: 7.5px;
+    font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
+    font-size: 15px;
+}
+
 .form-input input:focus, .form-input textarea:focus{
     outline-color: var(--button-color);
     color: var(--primary-color);

@@ -161,4 +161,16 @@
 
         return $idSneaker;
     }
+
+    function updateProducto($mysqli, $idProducto, $newData, $column){
+        $res = $mysqli->prepare("UPDATE sneakersInfo SET " . $column . "=? WHERE id=?");
+
+        $res->bind_param("ss", $newData, $idProducto);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+
+    }
 ?>

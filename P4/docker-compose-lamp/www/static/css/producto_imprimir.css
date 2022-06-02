@@ -45,3 +45,7 @@ footer{
     border: 0px;
     box-shadow: none;
 }
+
+.div-moderador {
+    display: none;
+}

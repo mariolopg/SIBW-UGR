@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+    {% block main_article %}
+        <div class="login-signup-cont">
+            <div class="login-signup-form">
+                <form action="edit_producto.php?id={{ producto.id }}" method="post" enctype="multipart/form-data">
+                    <div class="login-signup-title">
+                        <h1 class="msg">Editar producto</h1>
+                    </div>
+                    <div class="form-input">
+                        <span class="info-span">Nombre del artículo: {{ producto.nombre }}</span>
+                    </div>
+                    <div class="form-input">
+                        <input name="sneaker-name" type="text" placeholder="Introduzca el nuevo nombre del producto">
+                    </div>
+                    <div class="form-input">
+                        <span class="info-span">Descripción del artículo: {{ producto.descripcion }}</span>
+                    </div>
+                    <div class="form-input">
+                        <input name="sneaker-description" type="text" placeholder="Introduzca la nueva descripción del producto">
+                    </div>
+                    <div class="form-input">
+                        <span class="info-span">Precio del artículo: {{ producto.precio }}</span>
+                    </div>
+                    <div class="form-input">
+                        <input name="sneaker-price" type="number" min="0" placeholder="Introduzca el nuevo precio del producto">
+                    </div>
+                    <div class="form-input">
+                        <span class="info-span">Añadir nueva imagen</span>
+                    </div>
+                    <div class="form-input">
+                        <input name="sneaker-images" type="file" min="0" max="1">
+                    </div>
+                    <input name="sneaker-id" type="text" class="hidden" value="{{ producto.id }}">
+                    <div class="form-input-button">
+                        <input class="form-button" name="login-submit" type="submit" value="Editar producto">
+                    </div>
+                </form>
+                <div class="login-signup-question">
+                    <a href="producto.php?id={{ producto.id }}"><span>Cancelar</span></a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
