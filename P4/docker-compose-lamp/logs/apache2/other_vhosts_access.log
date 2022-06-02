@@ -12403,3 +12403,5 @@ localhost:80 172.19.0.1 - - [02/Jun/2022:11:59:33 +0000] "POST /profile.php HTTP
 localhost:80 172.19.0.1 - - [02/Jun/2022:11:59:33 +0000] "GET /index.php HTTP/1.1" 200 2027 "http://localhost/profile.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
 localhost:80 172.19.0.1 - - [02/Jun/2022:11:59:35 +0000] "GET /logout.php HTTP/1.1" 302 361 "http://localhost/index.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
 localhost:80 172.19.0.1 - - [02/Jun/2022:11:59:35 +0000] "GET /index.php HTTP/1.1" 200 1720 "http://localhost/index.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+localhost:80 172.19.0.1 - - [02/Jun/2022:12:00:06 +0000] "-" 408 0 "-" "-"
+localhost:80 172.19.0.1 - - [02/Jun/2022:12:02:17 +0000] "-" 408 0 "-" "-"
