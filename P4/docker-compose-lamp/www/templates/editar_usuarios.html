@@ -3,7 +3,7 @@
         {% if user.rol == "superuser" %}
             <div class="login-signup-cont">
                 <div class="login-signup-form">
-                    <form action="editar_usuario.php" method="post">
+                    <form action="editar_usuario.php?nickname={{ userAEditar.nickname }}" method="post">
                         <div class="login-signup-title">
                             <h1 class="msg">Editar usuario</h1>
                         </div>
@@ -34,7 +34,7 @@
                                 {% endfor %}
                             </select>
                         </div>
-                        <input class="hidden" name="user-nickname" type="text" value="{{userAEditar.nickname}}">
+                        <input class="hidden" name="user-nickname" type="text" value="{{ userAEditar.nickname }}">
                         <div class="form-input-button">
                             <input class="form-button" name="actualizar-submit" type="submit" value="Actualizar">
                         </div>

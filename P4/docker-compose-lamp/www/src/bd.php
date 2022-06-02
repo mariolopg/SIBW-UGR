@@ -170,7 +170,38 @@
         if(!$res->execute()){
             echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
         }
+    }
 
+    function addTag($mysqli, $id, $tag){
+        if(tagAvailable($mysqli, $id, $tag)){
+            $res = $mysqli->prepare("INSERT INTO tags (id_sneaker, tag) VALUES(?,?)");
+            $res->bind_param("is", $id, $tag);
 
+            if(!$res->execute()){
+                echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+            }
+
+            $res->close();
+        }
+    }
+
+    function tagAvailable($mysqli, $id, $tag){
+        $res = $mysqli->prepare("SELECT * FROM tags WHERE id_sneaker=?");
+        $res->bind_param("i", $id);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
+
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()){
+                if($row['tag'] == $tag)
+                    return false;
+            }
+        }
+
+        return true;
     }
 ?>
