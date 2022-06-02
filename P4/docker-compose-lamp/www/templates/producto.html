@@ -23,6 +23,16 @@
         <div class="print-product">
             <a href="producto.php?id={{ info.id }}&imprimir" class="print-button">Imprimir</a>
         </div>
+        {% if user.rol == "superuser" or user.rol == "gestor" %}
+            <div class="div-moderador">
+                <div class="comment-edit-button">
+                    <a href="edit_producto.php?id={{ info.id }}">Editar</a>
+                </div>
+                <div class="comment-edit-button delete">
+                    <a href="borrar_producto.php?id={{ info.id }}">Eliminar</a>
+                </div>
+            </div>
+        {% endif %}
         <!-- descripción del producto -->
         <p>
             {{ info.descripcion }}

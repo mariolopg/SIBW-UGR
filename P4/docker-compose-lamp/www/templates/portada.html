@@ -7,8 +7,20 @@
                     <!-- vista del producto -->
                     <div class="product-img">
                         <a href="producto.php?id={{ item.id }}"><img src="static/image/{{ item.image_name }}" alt="Embedded Image"/>
-                            <div class="product-img-overlay"><div class="sneaker-name">{{ item.nombre }}</div></div>
+                            <div class="product-img-overlay">
+                                <div class="sneaker-name">{{ item.nombre }}</div>
+                            </div>
                         </a>
+                        {% if user.rol == "superuser" or user.rol == "gestor" %}
+                            <div class="div-moderador">
+                                <div class="comment-edit-button">
+                                    <a href="edit_producto.php?id={{ item.id }}">Editar</a>
+                                </div>
+                                <div class="comment-edit-button delete">
+                                    <a href="borrar_producto.php?id={{ item.id }}">Eliminar</a>
+                                </div>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             {% endfor %}

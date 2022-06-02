@@ -148,4 +148,17 @@
 
         $res->close();
     }
+
+    function deleteProducto($mysqli, $id){
+        $res = $mysqli->prepare("DELETE from sneakersInfo WHERE id=?");
+        $res->bind_param("i", $id);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
+
+        return $idSneaker;
+    }
 ?>
