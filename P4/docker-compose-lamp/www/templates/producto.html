@@ -1,10 +1,11 @@
 {% extends "base.html" %}
     {% block main_article %}
+    {% if item.sneaker.estado == "publicado" or user.rol == "gestor" or user.rol == "superuser" %}
         <!-- nombre del producto, valoracion, imágen, botón de compra y precio -->
         <div class="product-description">
             <!-- nombre del producto y valoracion -->
             <div class="product-review-buy">
-                <h1>{{ info.nombre }}</h1>
+                <h1>{{ info.name }}</h1>
                 <div class="product-review">
                     <img src="static/image/starts_review.png"> <span>{{ info.valoraciones }} valoraciones</span>
                 </div>
@@ -106,6 +107,7 @@
                 </div>
             </div>
         {% endif %}
+    {% endif %}
         
     {% endblock %}
     {% block scripts %}

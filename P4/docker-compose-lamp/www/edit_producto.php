@@ -20,6 +20,9 @@
     }
 
     if(($user['rol'] == "superuser" || $user['rol'] == "moderador") && $idProducto){
+
+        $producto = getInfo($mysqli, $idProducto);
+        $images = getImages($mysqli, $idProducto);
     
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $sneakerName = $_POST['sneaker-name'];
@@ -27,6 +30,7 @@
             $sneakerPrice = $_POST['sneaker-price'];
             $sneakerImages = $_FILES['sneaker-images'];
             $sneakerId = $_POST['sneaker-id'];
+            $estado = $_POST['estado'];
 
             $imageName = $_FILES['sneaker-images']['name'];
             $imageSize = $_FILES['sneaker-images']['size'];
@@ -35,8 +39,14 @@
             $extensions = array("jpeg", "jpg", "png");
 
             $cambio = false;
+
+            if($producto['estado'] != $estado)
+                $cambio = true;
             
-            if(!empty($sneakerName) || !empty($sneakerDescription) || !empty($sneakerPrice) || ($imageSize > 0 && in_array($imageExtension, $extensions))){
+            if(!empty($sneakerName) || !empty($sneakerDescription) || !empty($sneakerPrice) || ($imageSize > 0 && in_array($imageExtension, $extensions)) || $cambio){
+                
+                updateProducto($mysqli, $sneakerId, $estado, "estado");
+                
                 if(!empty($sneakerName)){
                     updateProducto($mysqli, $sneakerId, $sneakerName, "name");
                 }
@@ -60,8 +70,7 @@
             }
         }
         
-        $producto = getInfo($mysqli, $idProducto);
-        $images = getImages($mysqli, $idProducto);
+        
 
         echo $twig->render('edit_producto.html', ['user' => $user, 'producto' => $producto, 'images' => $images]);
     }

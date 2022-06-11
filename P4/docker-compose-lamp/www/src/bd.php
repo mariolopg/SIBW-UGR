@@ -9,20 +9,11 @@
 
         $res = $res->get_result();
 
-        $nombre = 'no_name';
-        $descripcion = 'no_description';
-        $precio = 'no_price';
-        $valoraciones = '??';
-
         if($res->num_rows > 0){
             $row = $res->fetch_assoc();
-            $nombre = $row['name'];
-            $descripcion = $row['description'];
-            $precio = $row['precio'];
-            $valoraciones = $row['valoraciones'];
         }
 
-        return ['id' => $id, 'nombre' => $nombre, 'descripcion' => $descripcion, 'precio' => $precio, 'valoraciones' => $valoraciones];
+        return $row;
     }
 
     function getImages($mysqli, $id){
@@ -83,9 +74,9 @@
         $res = $mysqli->query("SELECT * FROM sneakersInfo");
         $info = array();
         while($row = $res->fetch_assoc()){
-            $name = getInfo($mysqli, $row['id']);
+            $sneaker = getInfo($mysqli, $row['id']);
             $images = getImages($mysqli, $row['id']);
-            $info[] = ['id' => $name['id'], 'nombre' => $name['nombre'], 'image_name' => $images[0]['image_name']];
+            $info[] = ['sneaker' => $sneaker, 'image_name' => $images[0]['image_name']];
         }
 
         return $info;
@@ -122,8 +113,8 @@
         return $rows;
     }
 
-    function addProduct($mysqli, $name, $description, $price){
-        $mysqli->query("INSERT INTO sneakersInfo (name, description, precio, valoraciones) VALUES('" . $name . "','" . $description . "','" . intval($price) . "', 0)");
+    function addProduct($mysqli, $name, $description, $price, $estado){
+        $mysqli->query("INSERT INTO sneakersInfo (name, description, precio, estado, valoraciones) VALUES('" . $name . "','" . $description . "','" . intval($price) . "','" . $estado . "', 0)");
         $res = $mysqli->query("SELECT * FROM sneakersInfo ORDER BY id DESC LIMIT 0, 1");
         
         if($res->num_rows > 0){

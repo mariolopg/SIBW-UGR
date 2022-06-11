@@ -3,29 +3,31 @@
         <!-- galería de productos -->
         <div class="product-grid">
             {% for item in gallery %}
-                <div class="product">
-                    <!-- vista del producto -->
-                    <div class="product-img">
-                        <a href="producto.php?id={{ item.id }}"><img src="static/image/{{ item.image_name }}" alt="Embedded Image"/>
-                            <div class="product-img-overlay">
-                                <div class="sneaker-name">{{ item.nombre }}</div>
-                            </div>
-                        </a>
-                        {% if user.rol == "superuser" or user.rol == "gestor" %}
-                            <div class="div-moderador">
-                                <div class="comment-edit-button">
-                                    <a href="edit_producto.php?id={{ item.id }}">Editar</a>
+                {% if item.sneaker.estado == "publicado" or user.rol == "gestor" or user.rol == "superuser" %}
+                    <div class="product">
+                        <!-- vista del producto -->
+                        <div class="product-img">
+                            <a href="producto.php?id={{ item.sneaker.id }}" class="{{item.sneaker.estado}}"><img src="static/image/{{ item.image_name }}" alt="Embedded Image"/>
+                                <div class="product-img-overlay">
+                                    <div class="sneaker-name">{{ item.sneaker.name }}</div>
                                 </div>
-                                <div class="comment-edit-button">
-                                    <a href="add_tag.php?id={{ item.id }}">Añadir etiqueta</a>
+                            </a>
+                            {% if user.rol == "superuser" or user.rol == "gestor" %}
+                                <div class="div-moderador">
+                                    <div class="comment-edit-button">
+                                        <a href="edit_producto.php?id={{ item.sneaker.id }}">Editar</a>
+                                    </div>
+                                    <div class="comment-edit-button">
+                                        <a href="add_tag.php?id={{ item.sneaker.id }}">Añadir etiqueta</a>
+                                    </div>
+                                    <div class="comment-edit-button delete">
+                                        <a href="borrar_producto.php?id={{ item.sneaker.id }}">Eliminar</a>
+                                    </div>
                                 </div>
-                                <div class="comment-edit-button delete">
-                                    <a href="borrar_producto.php?id={{ item.id }}">Eliminar</a>
-                                </div>
-                            </div>
-                        {% endif %}
+                            {% endif %}
+                        </div>
                     </div>
-                </div>
+                {% endif %}
             {% endfor %}
         </div>
     {% endblock %}

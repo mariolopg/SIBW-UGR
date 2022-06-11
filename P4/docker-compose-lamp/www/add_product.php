@@ -21,6 +21,7 @@
             $sneakerName = $_POST['sneaker-name'];
             $sneakerDescription= $_POST['sneaker-description'];
             $sneakerPrice = $_POST['sneaker-price'];
+            $estado = $_POST['estado'];
             $sneakerImages = $_FILES['sneaker-images'];
 
             $imageName = $_FILES['sneaker-images']['name'];
@@ -34,7 +35,7 @@
 
                 move_uploaded_file($file_tmp, "static/image/" . $imageName);
 
-                $id = addProduct($mysqli, $sneakerName, $sneakerDescription, $sneakerPrice);
+                $id = addProduct($mysqli, $sneakerName, $sneakerDescription, $sneakerPrice, $estado);
                 addImage($mysqli, $id, $imageName);
 
                 header("Location: index.php");
