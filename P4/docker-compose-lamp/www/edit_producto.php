@@ -61,8 +61,9 @@
         }
         
         $producto = getInfo($mysqli, $idProducto);
+        $images = getImages($mysqli, $idProducto);
 
-        echo $twig->render('edit_producto.html', ['user' => $user, 'producto' => $producto]);
+        echo $twig->render('edit_producto.html', ['user' => $user, 'producto' => $producto, 'images' => $images]);
     }
      
 ?>

@@ -345,3 +345,12 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
 [Sat Jun 11 15:27:04.079548 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
 [Sat Jun 11 15:27:04.080577 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sat Jun 11 16:24:05.198365 2022] [php7:error] [pid 32] [client 172.19.0.1:56076] script '/var/www/html/delete_image.php' not found or unable to stat, referer: http://localhost/edit_producto.php?id=1
+[Sat Jun 11 16:24:19.706130 2022] [php7:error] [pid 30] [client 172.19.0.1:56090] script '/var/www/html/delete_image.php' not found or unable to stat, referer: http://localhost/edit_producto.php?id=1
+[Sat Jun 11 16:24:32.132459 2022] [php7:error] [pid 38] [client 172.19.0.1:56092] script '/var/www/html/delete_image.php' not found or unable to stat, referer: http://localhost/edit_producto.php?id=1
+[Sat Jun 11 16:24:35.252115 2022] [php7:error] [pid 38] [client 172.19.0.1:56092] script '/var/www/html/delete_image.php' not found or unable to stat, referer: http://localhost/edit_producto.php?id=1
+[Sat Jun 11 16:24:41.275076 2022] [php7:error] [pid 37] [client 172.19.0.1:56106] script '/var/www/html/delete_image.php' not found or unable to stat, referer: http://localhost/edit_producto.php?id=1
+[Sat Jun 11 16:24:44.443001 2022] [php7:error] [pid 35] [client 172.19.0.1:56104] script '/var/www/html/delete_image.php' not found or unable to stat, referer: http://localhost/edit_producto.php?id=1
+[Sat Jun 11 16:25:13.893988 2022] [php7:error] [pid 30] [client 172.19.0.1:56130] script '/var/www/html/delete_image.php' not found or unable to stat, referer: http://localhost/edit_producto.php?id=1
+[Sat Jun 11 16:25:59.359601 2022] [php7:error] [pid 37] [client 172.19.0.1:56152] script '/var/www/html/delete_image.php' not found or unable to stat, referer: http://localhost/edit_producto.php?id=1
+[Sat Jun 11 16:32:48.528547 2022] [php7:error] [pid 32] [client 172.19.0.1:56188] script '/var/www/html/borrar_image.php' not found or unable to stat, referer: http://localhost/edit_producto.php?id=1

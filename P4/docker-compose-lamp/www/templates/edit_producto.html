@@ -25,6 +25,15 @@
                         <input name="sneaker-price" type="number" min="0" placeholder="Introduzca el nuevo precio del producto">
                     </div>
                     <div class="form-input">
+                        <span class="info-span">Eliminar imagen</span>
+                    </div>
+                    {% for image in images %}
+                    <div class="form-input">
+                        <span>{{ image.image_name }}</span>
+                        <a href="borrar_imagen.php?id={{ image.id }}" class="delete-image"><i class="fas fa-minus"></i></a>
+                    </div>
+                    {% endfor %}
+                    <div class="form-input">
                         <span class="info-span">Añadir nueva imagen</span>
                     </div>
                     <div class="form-input">

@@ -281,4 +281,15 @@ article p{
     background-color: rgb(202, 68, 68);
 }
 
+.delete-image {
+    height: 100%;
+    display: flex;
+    align-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+}
+
 

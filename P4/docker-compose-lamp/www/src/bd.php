@@ -26,7 +26,7 @@
     }
 
     function getImages($mysqli, $id){
-        $res = $mysqli->prepare("SELECT image_name FROM sneakersImages WHERE id_sneaker = ?");
+        $res = $mysqli->prepare("SELECT * FROM sneakersImages WHERE id_sneaker = ?");
         $res->bind_param("i", $id);
 
         if(!$res->execute()){
@@ -42,13 +42,9 @@
             while($row = $res->fetch_assoc()){
                 $rows[] = $row;
             }
-            
-            foreach ($rows as $key => $row) {
-                $info[$key] = ['image_name' => $row['image_name']];
-            }
         }
         
-        return $info;
+        return $rows;
     }
 
     function getComments($mysqli, $id){
@@ -224,5 +220,25 @@
         }
 
         return true;
+    }
+
+    function deleteImagen($mysqli, $id){
+        $res = $mysqli->prepare("SELECT * FROM sneakersImages WHERE id=?");
+        $res->bind_param("i", $id);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $id_sneaker = ($res->get_result())->fetch_assoc()['id_sneaker'];
+
+        $res = $mysqli->prepare("DELETE FROM sneakersImages WHERE id=?");
+        $res->bind_param("i", $id);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        return $id_sneaker;
     }
 ?>
