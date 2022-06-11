@@ -13392,3 +13392,4 @@ localhost:80 172.19.0.1 - - [11/Jun/2022:17:10:14 +0000] "POST /edit_producto.ph
 localhost:80 172.19.0.1 - - [11/Jun/2022:17:10:14 +0000] "GET /producto.php?id=1 HTTP/1.1" 200 2121 "http://localhost/edit_producto.php?id=1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
 localhost:80 172.19.0.1 - - [11/Jun/2022:17:10:15 +0000] "GET /static/css/producto.css HTTP/1.1" 200 1482 "http://localhost/static/css/base.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
 localhost:80 172.19.0.1 - - [11/Jun/2022:17:10:16 +0000] "GET /edit_producto.php?id=1 HTTP/1.1" 200 1933 "http://localhost/producto.php?id=1" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+localhost:80 172.19.0.1 - - [11/Jun/2022:17:11:06 +0000] "-" 408 0 "-" "-"
