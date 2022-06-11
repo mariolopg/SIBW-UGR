@@ -185,7 +185,6 @@
         $rows = array();
 
         if($res->num_rows > 0){
-            $row = $res->fetch_assoc();
             while($row = $res->fetch_assoc()){
                 $rows[] = $row;
             }
