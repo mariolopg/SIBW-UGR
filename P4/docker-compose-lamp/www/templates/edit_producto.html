@@ -29,8 +29,8 @@
                     </div>
                     {% for image in images %}
                     <div class="form-input">
-                        <span>{{ image.image_name }}</span>
-                        <a href="borrar_imagen.php?id={{ image.id }}" class="delete-image"><i class="fas fa-minus"></i></a>
+                        <span><img class="delete-image" src="static/image/{{ image.image_name }}"></span>
+                        <div class="wrap-delete-image"><a href="borrar_imagen.php?id={{ image.id }}" class="delete-image-button"><i class="fas fa-minus"></i></a></div>
                     </div>
                     {% endfor %}
                     <div class="form-input">

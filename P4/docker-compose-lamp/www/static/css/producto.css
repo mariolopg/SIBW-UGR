@@ -281,8 +281,16 @@ article p{
     background-color: rgb(202, 68, 68);
 }
 
-.delete-image {
-    height: 100%;
+.wrap-delete-image {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto 0px;
+    vertical-align: middle;
+}
+
+.delete-image-button {
+    max-height: fit-content;
     display: flex;
     align-content: center;
     padding: 5px;
@@ -290,6 +298,10 @@ article p{
     background-color: red;
     text-decoration: none;
     color: white;
+}
+
+.delete-image {
+    max-width: 100px;
 }
 
 
