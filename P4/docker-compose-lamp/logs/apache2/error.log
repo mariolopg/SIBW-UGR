@@ -342,3 +342,6 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Thu Jun 02 11:37:49.025792 2022] [php7:error] [pid 51] [client 172.19.0.1:60736] script '/var/www/html/product.php' not found or unable to stat, referer: http://localhost/add_tag.php?id=1
 [Thu Jun 02 11:47:09.095172 2022] [php7:error] [pid 57] [client 172.19.0.1:60980] script '/var/www/html/edit_comment.php' not found or unable to stat, referer: http://localhost/comentarios.php
 [Thu Jun 02 11:49:58.425699 2022] [php7:error] [pid 46] [client 172.19.0.1:61066] script '/var/www/html/borrar_comment.php' not found or unable to stat, referer: http://localhost/comentarios.php
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sat Jun 11 15:27:04.079548 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Sat Jun 11 15:27:04.080577 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'

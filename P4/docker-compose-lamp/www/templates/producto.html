@@ -40,6 +40,12 @@
         <p>
             {{ info.descripcion }}
         </p>
+        <p>
+           Tags:
+           {% for tag in tags %}
+            {{ tag.tag }}
+           {% endfor %}
+        </p>
 
         {% if user %}
             <div class="comment-link" id="id-comment-link">

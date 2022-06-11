@@ -25,6 +25,7 @@
     $info = getInfo($mysqli, $id);
     $images = getImages($mysqli, $id);
     $comments = getComments($mysqli, $id);
+    $tags = getTags($mysqli, $id);
 
     if (isset($_SESSION['user'])) {
         $user = getUser($mysqli, $_SESSION['user']);
@@ -32,5 +33,5 @@
 
     $usuarios = getUsers($mysqli);
 
-    echo $twig->render($link, ['info' => $info, 'images' => $images, 'comments' => $comments, 'user' => $user, 'usuarios' => $usuarios]);
+    echo $twig->render($link, ['info' => $info, 'images' => $images, 'comments' => $comments, 'user' => $user, 'usuarios' => $usuarios, 'tags' => $tags]);
 ?>

@@ -172,6 +172,28 @@
         }
     }
 
+    function getTags($mysqli, $id){
+        $res = $mysqli->prepare("SELECT * FROM tags WHERE id_sneaker=?");
+        $res->bind_param("i", $id);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
+
+        $rows = array();
+
+        if($res->num_rows > 0){
+            $row = $res->fetch_assoc();
+            while($row = $res->fetch_assoc()){
+                $rows[] = $row;
+            }
+        }
+
+        return $rows;
+    }
+
     function addTag($mysqli, $id, $tag){
         if(tagAvailable($mysqli, $id, $tag)){
             $res = $mysqli->prepare("INSERT INTO tags (id_sneaker, tag) VALUES(?,?)");
