@@ -1,5 +1,6 @@
 {% extends "base.html" %}
     {% block main_article %}
+        {% include "common/searchBar.html" %}
         <!-- galería de productos -->
         <div class="product-grid">
             {% for item in gallery %}
@@ -30,4 +31,7 @@
                 {% endif %}
             {% endfor %}
         </div>
+    {% endblock %}
+    {% block scripts %}
+        <script src="static/js/search.js"></script>
     {% endblock %}

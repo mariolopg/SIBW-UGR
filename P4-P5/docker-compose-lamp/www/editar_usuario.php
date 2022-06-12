@@ -16,8 +16,8 @@
     }
 
     if($user['rol'] == "superuser"){
-        if(isset($_GET['nickname'])){
-            $userAEditar = getUser($mysqli, $_GET['nickname']);
+        if(isset($_GET['id'])){
+            $userAEditar = getUserById($mysqli, $_GET['id']);
         };
 
         $roles = getRoles($mysqli);
@@ -27,8 +27,7 @@
             $newEmail = $_POST['new-email'];
             $newRol = $_POST['new-rol'];
             
-            $userNickname = $_POST['user-nickname'];
-            $userAEditar = getUser($mysqli, $userNickname);
+            $userAEditar = getUserById($mysqli, $_POST['user-id']);
     
             if(!empty($newNickname) || !empty($newEmail) || ($newRol != $userAEditar['rol'])){
                 if(nicknameAvailable($mysqli, $newNickname) && !empty($newNickname)){
@@ -36,21 +35,21 @@
                         $_SESSION['user'] = $newNickname;
                     }
                     $modificacion = true;
-                    actualizarDatos($mysqli, $userNickname, $newNickname, "nickname");
+                    actualizarDatosById($mysqli, $userAEditar['id'], $newNickname, "nickname");
                 }
     
                 if(emailAvailable($mysqli, $newEmail) && !empty($newEmail) && checkEmail($newEmail)){
                     $modificacion = true;
-                    actualizarDatos($mysqli, $userNickname, $newEmail, "email");
+                    actualizarDatosById($mysqli, $userAEditar['id'], $newEmail, "email");
                 }
     
                 if($newRol != $userAEditar['rol']){
                     $modificacion = true;
-                    actualizarDatos($mysqli, $userNickname, $newRol, "rol");
+                    actualizarDatosById($mysqli, $userAEditar['id'], $newRol, "rol");
                 }
     
                 if($modificacion){
-                    header("Location: usuarios.php");
+                    header("Location: editar_usuario.php?id=" . $userAEditar['id']);
                     exit();
                 }
             }

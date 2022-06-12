@@ -99,6 +99,23 @@
         return $row;
     }
 
+    function getUserById($mysqli, $id){
+        $res = $mysqli->prepare("SELECT * FROM usuarios WHERE id = ?");
+        $res->bind_param("i", $id);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
+
+        if($res->num_rows > 0){
+            $row = $res->fetch_assoc();
+        }
+
+        return $row;
+    }
+
     function getRoles($mysqli){
         $res = $mysqli->query("SELECT * FROM roles");
 
@@ -231,5 +248,37 @@
         }
 
         return $id_sneaker;
+    }
+
+    function searchItem($mysqli, $user, $search){
+        $search = "%$search%";
+
+        if($user['rol'] == "superuser" || $user['rol'] == "gestor"){
+            if(!$res = $mysqli->prepare("SELECT * FROM sneakersInfo WHERE (LOWER(name) LIKE LOWER(?) or LOWER(description) LIKE LOWER(?))")){
+                echo "Falló la preparación. (" . $mysqli->errno . ") " . $mysqli->error;
+            }
+        }
+        else{
+            if(!$res = $mysqli->prepare("SELECT * FROM sneakersInfo WHERE (LOWER(name) LIKE LOWER(?) or LOWER(description) LIKE LOWER(?)) and estado='publicado'")){
+                echo "Falló la preparación. (" . $mysqli->errno . ") " . $mysqli->error;
+            }
+        }
+
+        $res->bind_param("ss", $search, $search);
+
+        if(!$res->execute()){
+            echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+        }
+
+        $res = $res->get_result();
+        $rows = array();
+
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()){
+                $rows[] = $row;
+            }
+        }
+
+        return json_encode($rows);
     }
 ?>

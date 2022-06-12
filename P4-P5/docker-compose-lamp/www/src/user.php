@@ -85,6 +85,24 @@
         }
     }
 
+    function actualizarDatosById($mysqli, $id, $newData, $column){
+        $puedeCambiar = true;
+        if($column == "rol"){
+            $usuario = getUserById($mysqli, $id);
+            if($usuario['rol'] == "superuser" && numberSuperUsers($mysqli) == 1){
+                $puedeCambiar = false;
+            }
+        }
+        if($puedeCambiar){
+            $res = $mysqli->prepare("UPDATE usuarios SET " . $column . "=? WHERE id=?");
+            $res->bind_param("si", $newData, $id);
+
+            if(!$res->execute()){
+                echo("Falló la ejecución: (" . $res->errno . ")" . $res->error);
+            }
+        }
+    }
+
     function numberSuperUsers($mysqli){
         $usuarios = getUsers($mysqli);
         $numSU = 0;
