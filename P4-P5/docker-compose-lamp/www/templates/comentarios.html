@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+    {% block main_article %}
+        {% if user.rol == "superuser" or user.rol == "moderador" %}
+        <div class="login-signup-cont">
+            <div class="wrap-users-list">
+                {% for item in comments %}
+                    <div class="wrap-user">
+                        <div class="wrap-span">
+                            <span>{{ item.comment }}</span>
+                        </div>
+                        <div class="div-moderador">
+                            <div class="comment-edit-button">
+                                <a href="edit_comment.php?id={{ item.id }}">Editar</a>
+                            </div>
+                            <div class="comment-edit-button delete">
+                                <a href="borrar_comment.php?id={{ item.id }}">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    {% endblock %}

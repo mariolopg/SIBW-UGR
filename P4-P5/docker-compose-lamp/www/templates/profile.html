@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+    {% block main_article %}
+        {% if user %}
+            <div class="login-signup-cont">
+                <div class="login-signup-form">
+                    <form action="profile.php" method="post">
+                        <div class="login-signup-title">
+                            <h1 class="msg">Editar perfil</h1>
+                        </div>
+                        <div class="form-input">
+                            <span class="info-span">Nombre de usuario: {{ user.nickname }}</span>
+                        </div>
+                        <div class="form-input">
+                            <input name="new-nickname" type="text" placeholder="Nuevo nombre de usuario">
+                        </div>
+                        <div class="form-input">
+                            <span class="info-span">Correo electrónico: {{ user.email }}</span>
+                        </div>
+                        <div class="form-input">
+                            <input name="new-email" type="email" placeholder="Nuevo correo">
+                        </div>
+                        <div class="form-input">
+                            <input name="new-password1" type="password" placeholder="Nueva contraseña">
+                        </div>
+                        <div class="form-input">
+                            <input name="new-password2" type="password" placeholder="Nueva contraseña">
+                        </div>
+                        <div class="form-input-button">
+                            <input class="form-button" name="actualizar-submit" type="submit" value="Actualizar">
+                        </div>
+                    </form>
+                    <div class="login-signup-question">
+                        <a href="index.php"><span>Cancelar</span></a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endblock %}
