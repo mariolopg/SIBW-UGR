@@ -7,23 +7,26 @@
                         <h1 class="msg">Editar producto</h1>
                     </div>
                     <div class="form-input">
-                        <span class="info-span">Nombre del artículo: {{ producto.nombre }}</span>
+                        <span class="info-span">Nombre del artículo: {{ producto.name }}</span>
                     </div>
                     <div class="form-input">
-                        <input name="sneaker-name" type="text" placeholder="Introduzca el nuevo nombre del producto">
+                        <input name="sneaker-name" type="text" placeholder="Introduzca el nuevo nombre del producto" value="{{ producto.name }}">
+                    </div>
+                    <p class="error">{{ errores.sneakerName }}</p>
+                    <div class="form-input">
+                        <span class="info-span">Descripción del artículo: {{ producto.description }}</span>
                     </div>
                     <div class="form-input">
-                        <span class="info-span">Descripción del artículo: {{ producto.descripcion }}</span>
+                        <input name="sneaker-description" type="text" placeholder="Introduzca la nueva descripción del producto" value="{{ producto.description }}">
                     </div>
-                    <div class="form-input">
-                        <input name="sneaker-description" type="text" placeholder="Introduzca la nueva descripción del producto">
-                    </div>
+                    <p class="error">{{ errores.sneakerDescription }}</p>
                     <div class="form-input">
                         <span class="info-span">Precio del artículo: {{ producto.precio }}</span>
                     </div>
                     <div class="form-input">
-                        <input name="sneaker-price" type="number" min="0" placeholder="Introduzca el nuevo precio del producto">
+                        <input name="sneaker-price" type="number" min="0" placeholder="Introduzca el nuevo precio del producto" value="{{ producto.precio }}">
                     </div>
+                    <p class="error">{{ errores.sneakerPrice }}</p>
                     <div class="form-input">
                         <span class="info-span">Eliminar imagen</span>
                     </div>

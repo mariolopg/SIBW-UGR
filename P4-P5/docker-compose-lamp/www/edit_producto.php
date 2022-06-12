@@ -19,6 +19,8 @@
         $idProducto = $_GET['id'];
     }
 
+    $errores = array();
+
     if(($user['rol'] == "superuser" || $user['rol'] == "moderador") && $idProducto){
 
         $producto = getInfo($mysqli, $idProducto);
@@ -37,28 +39,13 @@
             $fileExtension = $_FILES['sneaker-images']['type'];
             $imageExtension = strtolower(end(explode(".", $imageName)));
             $extensions = array("jpeg", "jpg", "png");
-
-            $cambio = false;
-
-            if($producto['estado'] != $estado)
-                $cambio = true;
             
-            if(!empty($sneakerName) || !empty($sneakerDescription) || !empty($sneakerPrice) || ($imageSize > 0 && in_array($imageExtension, $extensions)) || $cambio){
-                
+            if($estado == "sin publicar"){
                 updateProducto($mysqli, $sneakerId, $estado, "estado");
+                updateProducto($mysqli, $sneakerId, $sneakerName, "name");
+                updateProducto($mysqli, $sneakerId, $sneakerDescription, "description");
+                updateProducto($mysqli, $sneakerId, $sneakerPrice, "precio");
                 
-                if(!empty($sneakerName)){
-                    updateProducto($mysqli, $sneakerId, $sneakerName, "name");
-                }
-
-                if(!empty($sneakerDescription)){
-                    updateProducto($mysqli, $sneakerId, $sneakerDescription, "description");
-                }
-
-                if(!empty($sneakerPrice)){
-                    updateProducto($mysqli, $sneakerId, $sneakerPrice, "precio");
-                }
-
                 if($imageSize > 0 && in_array($imageExtension, $extensions)){
                     $file_tmp = $_FILES['sneaker-images']['tmp_name'];
                     move_uploaded_file($file_tmp, "static/image/" . $imageName);
@@ -67,12 +54,43 @@
                 
                 header("Location: producto.php?id=" . $idProducto);
                 exit();
+
             }
+            else if(!empty($sneakerName) && !empty($sneakerDescription) && !empty($sneakerPrice)){
+                updateProducto($mysqli, $sneakerId, $estado, "estado");
+                updateProducto($mysqli, $sneakerId, $sneakerName, "name");
+                updateProducto($mysqli, $sneakerId, $sneakerDescription, "description");
+                updateProducto($mysqli, $sneakerId, $sneakerPrice, "precio");
+
+                if($imageSize > 0 && in_array($imageExtension, $extensions)){
+                    $file_tmp = $_FILES['sneaker-images']['tmp_name'];
+                    move_uploaded_file($file_tmp, "static/image/" . $imageName);
+                    addImage($mysqli, $sneakerId, $imageName);
+                }
+
+                header("Location: producto.php?id=" . $idProducto);
+                exit();
+            }
+            else {
+                $producto['name'] = $sneakerName;
+                $producto['description'] = $sneakerDescription;
+                $producto['price'] = $sneakerPrice;
+
+                if(empty($sneakerName))
+                    $errores['sneakerName'] = "El campo no puede estar vacío";
+
+                if(empty($sneakerDescription))
+                    $errores['sneakerDescription'] = "El campo no puede estar vacío";
+
+                if(empty($sneakerPrice))
+                    $errores['sneakerPrice'] = "El campo no puede estar vacío";
+            }
+
         }
         
         
 
-        echo $twig->render('edit_producto.html', ['user' => $user, 'producto' => $producto, 'images' => $images]);
+        echo $twig->render('edit_producto.html', ['user' => $user, 'producto' => $producto, 'images' => $images, 'errores' => $errores]);
     }
      
 ?>

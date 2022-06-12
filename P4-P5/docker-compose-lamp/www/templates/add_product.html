@@ -7,16 +7,19 @@
                         <h1 class="msg">Añadir producto</h1>
                     </div>
                     <div class="form-input">
-                        <input name="sneaker-name" type="text" placeholder="Introduzca el nombre del producto">
+                        <input name="sneaker-name" type="text" placeholder="Introduzca el nombre del producto" value="{{ sneakerName }}">
                     </div>
+                    <p class="error">{{ errores.sneakerName }}</p>
                     <div class="form-input">
-                        <input name="sneaker-description" type="textarea" placeholder="Introduzca la descripción del producto">
+                        <input name="sneaker-description" type="textarea" placeholder="Introduzca la descripción del producto" value="{{ sneakerDescription }}">
                     </div>
+                    <p class="error">{{ errores.sneakerDescription }}</p>
                     <div class="form-input">
-                        <input name="sneaker-price" type="number" min="0" placeholder="Introduzca el precio del producto">
+                        <input name="sneaker-price" type="number" min="0" placeholder="Introduzca el precio del producto" value="{{ sneakerPrice }}">
                     </div>
+                    <p class="error">{{ errores.sneakerPrice }}</p>
                     <div class="form-input">
-                        <input name="sneaker-images" type="file" min="1" max="1">
+                        <input name="sneaker-images" type="file" min="0" max="1">
                     </div>
                     <div class="form-input">
                         <label for="estado">Estado:</label>

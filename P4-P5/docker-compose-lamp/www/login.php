@@ -9,6 +9,8 @@
 
     $mysqli = conectar();
 
+    $errores = array();
+
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $nickname = $_POST['login-nickname'];
         $password = $_POST['login-password'];
@@ -20,7 +22,15 @@
             header("Location: index.php");
             exit();
         }
+        else if(empty($nickname) || empty($password)) {
+            if(empty($nickname))
+                $errores['username'] = "Debe introducir un usuario";
+            if (empty($password))
+                $errores['password'] = "Debe introducir una contraseña";
+        }
+        else 
+            $errores['login'] = "Usuario o contraseña incorrectos";
     }
      
-    echo $twig->render('login.html');
+    echo $twig->render('login.html', ['username' => $nickname, 'password' => $password, 'errores' => $errores]);
 ?>

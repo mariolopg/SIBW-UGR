@@ -8,17 +8,22 @@
                         <h1 class="msg">Crear cuenta</h1>
                     </div>
                     <div class="form-input">
-                        <input name="signup-nickname" type="text" placeholder="Introduzca su nombre de usuario">
+                        <input name="signup-nickname" type="text" placeholder="Introduzca su nombre de usuario" value={{ username }}>
                     </div>
+                    <p class="error">{{ errores.username }}</p>
                     <div class="form-input">
-                        <input name="signup-email" type="email" placeholder="Introduzca su correo electrónico">
+                        <input name="signup-email" type="email" placeholder="Introduzca su correo electrónico" value={{ email }}>
                     </div>
+                    <p class="error">{{ errores.email }}</p>
                     <div class="form-input">
                         <input name="signup-password1" type="password" placeholder="Introduzca su contraseña">
                     </div>
+                    <p class="error">{{ errores.password1 }}</p>
                     <div class="form-input">
                         <input name="signup-password2" type="password" placeholder="Vuelva a introducir su contraseña">
                     </div>
+                    <p class="error">{{ errores.password2 }}</p>
+                    <p class="error">{{ errores.passwords }}</p>
                     <div class="form-input-button">
                         <input class="form-button" id="signup-submit" type="submit" value="Crear cuenta">
                     </div>

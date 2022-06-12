@@ -8,11 +8,14 @@
                         <h1 class="msg">Iniciar sesión</h1>
                     </div>
                     <div class="form-input">
-                        <input name="login-nickname" type="text" placeholder="Introduzca su nombre de usuario">
+                        <input name="login-nickname" type="text" placeholder="Introduzca su nombre de usuario" value={{ username }}>
                     </div>
+                    <p class="error">{{ errores.username }}</p>
                     <div class="form-input">
-                        <input name="login-password" type="password" placeholder="Introduzca su contraseña de nuevo">
+                        <input name="login-password" type="password" placeholder="Introduzca su contraseña" value={{ password }}>
                     </div>
+                    <p class="error">{{ errores.password }}</p>
+                    <p class="error">{{ errores.login }}</p>
                     <div class="form-input-button">
                         <input class="form-button" name="login-submit" type="submit" value="Iniciar sesión">
                     </div>
