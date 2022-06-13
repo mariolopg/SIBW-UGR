@@ -13,18 +13,21 @@
                         <div class="form-input">
                             <input name="new-nickname" type="text" placeholder="Nuevo nombre de usuario">
                         </div>
+                        <p class="error">{{ errores.username }}</p>
                         <div class="form-input">
                             <span class="info-span">Correo electrónico: {{ user.email }}</span>
                         </div>
                         <div class="form-input">
                             <input name="new-email" type="email" placeholder="Nuevo correo">
                         </div>
+                        <p class="error">{{ errores.email }}</p>
                         <div class="form-input">
                             <input name="new-password1" type="password" placeholder="Nueva contraseña">
                         </div>
                         <div class="form-input">
                             <input name="new-password2" type="password" placeholder="Nueva contraseña">
                         </div>
+                        <p class="error">{{ errores.password }}</p>
                         <div class="form-input-button">
                             <input class="form-button" name="actualizar-submit" type="submit" value="Actualizar">
                         </div>

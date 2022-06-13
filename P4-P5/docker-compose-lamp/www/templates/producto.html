@@ -1,6 +1,6 @@
 {% extends "base.html" %}
     {% block main_article %}
-    {% if item.sneaker.estado == "publicado" or user.rol == "gestor" or user.rol == "superuser" %}
+    {% if info.estado == "publicado" or user.rol == "superuser" or user.rol == "gestor" %}
         <!-- nombre del producto, valoracion, imágen, botón de compra y precio -->
         <div class="product-description">
             <!-- nombre del producto y valoracion -->

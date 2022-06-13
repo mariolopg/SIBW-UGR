@@ -383,3 +383,8 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Sun Jun 12 20:09:46.836727 2022] [autoindex:error] [pid 36] [client 172.19.0.1:59990] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/buscador.php
 [Sun Jun 12 20:10:20.333365 2022] [autoindex:error] [pid 51] [client 172.19.0.1:60002] AH01276: Cannot serve directory /var/www/html/static/image/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive, referer: http://localhost/buscador.php
 [Sun Jun 12 20:57:33.723181 2022] [php7:error] [pid 62] [client 172.19.0.1:60630] script '/var/www/html/src/item.php' not found or unable to stat
+[Sun Jun 12 22:04:59.193699 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Mon Jun 13 08:21:55.939869 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.4.2 configured -- resuming normal operations
+[Mon Jun 13 08:21:55.940597 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jun 13 08:50:17.328079 2022] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully

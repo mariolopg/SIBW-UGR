@@ -33,7 +33,7 @@ function addResult(id, name, query) {
     var resultados = document.getElementById("search-result");
     var nombre = document.createElement("div");
     nombre.classList.add("wrap-nombre");
-    var re = new RegExp(query, "ig");
+    var re = new RegExp(query, "i");
     name = name.replace(re, "<strong>" + name.match(re) + "</strong>");
     nombre.innerHTML = name;
     var enlace = document.createElement("a");
