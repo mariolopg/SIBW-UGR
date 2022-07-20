@@ -4,7 +4,6 @@ window.onload = function (){
 };
 
 function search() {
-    clearSearch();
     var search_input = document.getElementById("search-input");
 
     if(search_input.value != ""){
@@ -16,6 +15,7 @@ function search() {
 
         ajax.onreadystatechange = function() {
             if(this.readyState == 4 && this.status == 200){
+                clearSearch();
                 var resultados = JSON.parse(this.responseText);
                 for(var i = 0; i < resultados.length; i++)
                     addResult(resultados[i]['id'], resultados[i]['name'], search_input.value)
